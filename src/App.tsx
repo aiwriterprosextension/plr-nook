@@ -24,6 +24,9 @@ import FunnelThankYou from "@/pages/funnel/FunnelThankYou";
 import Dashboard from "@/pages/dashboard/Dashboard";
 import DashboardOverview from "@/pages/dashboard/DashboardOverview";
 import DashboardDownload from "@/pages/dashboard/DashboardDownload";
+import DashboardSettings from "@/pages/dashboard/DashboardSettings";
+import DashboardLicense from "@/pages/dashboard/DashboardLicense";
+import DashboardHelp from "@/pages/dashboard/DashboardHelp";
 
 const queryClient = new QueryClient();
 
@@ -54,6 +57,9 @@ const App = () => (
           <Route path="/dashboard" element={<Dashboard />}>
             <Route index element={<DashboardOverview />} />
             <Route path="download" element={<DashboardDownload />} />
+            <Route path="settings" element={<DashboardSettings />} />
+            <Route path="license" element={<DashboardLicense />} />
+            <Route path="help" element={<DashboardHelp />} />
           </Route>
 
           {/* Catch-all */}
