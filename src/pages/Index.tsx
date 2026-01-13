@@ -2,12 +2,23 @@ import { Link } from "react-router-dom";
 import { 
   Scan, FolderOpen, FileKey, Eye, RotateCw, Search, Code, Palette,
   Clock, DollarSign, AlertTriangle, Archive, Check, ArrowRight,
-  Users, ShoppingCart, Megaphone, GraduationCap, Play, Star
+  Users, ShoppingCart, Megaphone, GraduationCap, Play, Star, Video
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
+// Landing page components
+import { StatsBar } from "@/components/landing/StatsBar";
+import { TrustBadges } from "@/components/landing/TrustBadges";
+import { CommonMistakes } from "@/components/landing/CommonMistakes";
+import { TransformationTimeline } from "@/components/landing/TransformationTimeline";
+import { CaseStudy } from "@/components/landing/CaseStudy";
+import { BonusStack } from "@/components/landing/BonusStack";
+import { ValueStack } from "@/components/landing/ValueStack";
+import { PlatformCTA, PlatformBadges } from "@/components/landing/PlatformCTA";
+import { EnhancedFooterCTA } from "@/components/landing/EnhancedFooterCTA";
 
 const painPoints = [
   { icon: Clock, title: "Wasted Time Searching", desc: "Hours lost digging through folders to find that one PLR package you know you bought." },
@@ -52,6 +63,15 @@ const faqs = [
   { q: "How does the PLR detection work?", a: "Our AI scans file names, folder structures, readme files, and license documents to identify PLR content accurately." },
   { q: "Can I organize PLR on external drives?", a: "Yes! You can scan any drive connected to your computer, including external HDDs, SSDs, and network drives." },
   { q: "Is there a money-back guarantee?", a: "Yes, we offer a 7-day no-questions-asked refund policy. Try it risk-free." },
+  // New objection-crushing FAQs
+  { q: "How is this different from just using folders?", a: "Folders require manual organization that takes hours. PLR Organizer Pro automatically scans, categorizes, and tags your content by niche, type, and license rights. It also detects duplicates, tracks licenses, and lets you preview files without extracting them. It's like having a librarian for your PLR content." },
+  { q: "What if I'm not tech-savvy?", a: "PLR Organizer Pro was designed for non-technical users. The interface is simple: click 'Scan', wait a few minutes, and your PLR is organized. No coding, no complex setup, no technical knowledge required. If you can use email, you can use this." },
+  { q: "Can I try it before buying?", a: "We offer a 7-day money-back guarantee. Download it, use it, organize your entire library. If you're not 100% satisfied for any reason, email us within 7 days for a full refund. No questions asked, no hoops to jump through." },
+  { q: "Will this slow down my computer?", a: "No. PLR Organizer Pro is lightweight and optimized for performance. It uses minimal resources during scanning and almost nothing when idle. Most users don't even notice it running." },
+  { q: "What happens to my data if I uninstall?", a: "Your original PLR files are never moved or modified unless you explicitly choose to reorganize them. The app's database is separate. Uninstalling removes only the app—your PLR content stays exactly where it was." },
+  { q: "Do you sell or share my information?", a: "Absolutely not. PLR Organizer Pro runs 100% locally on your computer. We have no access to your files, folders, or content. Zero data leaves your machine. Your privacy is completely protected." },
+  { q: "Can I use this for client work?", a: "Yes! Many virtual assistants, agencies, and service providers use PLR Organizer Pro to manage PLR for themselves and their clients. The license covers all personal and professional use." },
+  { q: "What if I have PLR on multiple computers?", a: "Your license allows installation on up to 3 computers you own. You can scan and organize PLR across all of them. Each installation maintains its own database, or you can sync via shared drives." },
 ];
 
 const comparisonData = [
@@ -61,6 +81,12 @@ const comparisonData = [
   { feature: "File Preview", us: true, manual: true, spreadsheet: false },
   { feature: "Duplicate Detection", us: true, manual: false, spreadsheet: false },
   { feature: "Time to Organize 1000 Files", us: "Minutes", manual: "Days", spreadsheet: "Hours" },
+];
+
+const howItWorks = [
+  { step: 1, title: "Download & Install", desc: "Get the app for Windows, Mac, or Linux. Installation takes under a minute.", time: "60 seconds" },
+  { step: 2, title: "Scan Your Computer", desc: "Click 'Scan' and let our AI find every PLR package on your drives.", time: "5-10 minutes" },
+  { step: 3, title: "Auto-Organize", desc: "Watch as your entire PLR library gets organized automatically by niche and type.", time: "Automatic" },
 ];
 
 export default function Index() {
@@ -76,38 +102,29 @@ export default function Index() {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-secondary mb-6 animate-fade-in">
-              Stop Drowning in Disorganized PLR Content.{" "}
-              <span className="text-gradient-primary">Start Profiting.</span>
+              Organize 10,000+ PLR Files in Under 10 Minutes.{" "}
+              <span className="text-gradient-primary">Then Start Profiting.</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto animate-fade-in">
+            <p className="text-lg md:text-xl text-muted-foreground mb-4 max-w-3xl mx-auto animate-fade-in">
               The only desktop app that scans your entire computer, automatically organizes PLR by niche, 
               tracks licenses, and eliminates duplicate purchases forever.
             </p>
+
+            <p className="text-base text-secondary font-medium mb-8 animate-fade-in">
+              Join 10,000+ users who've organized 2.3M+ files and rediscovered $847K+ in forgotten PLR
+            </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in">
-              <Link to="/funnel/offer">
-                <Button variant="cta" size="xl">
-                  Get PLR Organizer Pro
-                  <ArrowRight className="h-5 w-5" />
-                </Button>
-              </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in">
+              <PlatformCTA />
               <Button variant="outlineGhost" size="xl">
                 <Play className="h-5 w-5" />
                 Watch Demo Video
               </Button>
             </div>
-            
-            <div className="flex flex-wrap justify-center gap-8 text-sm animate-fade-in">
-              <div className="flex items-center gap-2">
-                <Users className="h-5 w-5 text-primary" />
-                <span className="font-semibold">10,000+ Users</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Clock className="h-5 w-5 text-primary" />
-                <span className="font-semibold">Save 5+ Hours/Week</span>
-              </div>
-            </div>
+
+            {/* Trust Badges */}
+            <TrustBadges />
           </div>
         </div>
         
@@ -130,6 +147,9 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Stats Bar */}
+      <StatsBar />
 
       {/* Pain Points Section */}
       <section className="py-20 bg-background">
@@ -161,8 +181,11 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Common Mistakes Section */}
+      <CommonMistakes />
+
       {/* Solution Overview */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-background">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
@@ -192,7 +215,7 @@ export default function Index() {
       </section>
 
       {/* Feature Breakdown Tabs */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-muted">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
@@ -299,27 +322,36 @@ export default function Index() {
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-20 bg-muted">
+      {/* How It Works - Enhanced */}
+      <section className="py-20 bg-background">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
               Get Organized in 3 Simple Steps
             </h2>
+            <p className="text-muted-foreground">
+              <a href="#" className="text-primary hover:underline inline-flex items-center gap-1">
+                <Video className="h-4 w-4" />
+                See Full Installation Video
+              </a>
+            </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {[
-              { step: 1, title: "Download & Install", desc: "Get the app for Windows, Mac, or Linux. Installation takes under a minute." },
-              { step: 2, title: "Scan Your Computer", desc: "Click 'Scan' and let our AI find every PLR package on your drives." },
-              { step: 3, title: "Auto-Organize", desc: "Watch as your entire PLR library gets organized automatically by niche and type." },
-            ].map((item) => (
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {howItWorks.map((item) => (
               <div key={item.step} className="text-center">
                 <div className="w-16 h-16 rounded-full bg-gradient-primary text-primary-foreground text-2xl font-bold flex items-center justify-center mx-auto mb-4 shadow-red">
                   {item.step}
                 </div>
                 <h3 className="text-xl font-bold text-secondary mb-2">{item.title}</h3>
-                <p className="text-muted-foreground">{item.desc}</p>
+                <p className="text-muted-foreground mb-3">{item.desc}</p>
+                <span className="inline-block px-3 py-1 bg-accent text-primary text-sm font-semibold rounded-full">
+                  ⏱️ {item.time}
+                </span>
+                {/* Screenshot placeholder */}
+                <div className="mt-4 aspect-video bg-muted rounded-lg flex items-center justify-center border border-border">
+                  <span className="text-xs text-muted-foreground">Screenshot: Step {item.step}</span>
+                </div>
               </div>
             ))}
           </div>
@@ -327,7 +359,7 @@ export default function Index() {
       </section>
 
       {/* Target Audience */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-muted">
         <div className="container">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
@@ -350,6 +382,12 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* Case Study */}
+      <CaseStudy />
+
+      {/* Transformation Timeline */}
+      <TransformationTimeline />
 
       {/* Comparison Table */}
       <section className="py-20 bg-muted">
@@ -433,22 +471,30 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Pricing Teaser */}
+      {/* Bonus Stack */}
+      <BonusStack />
+
+      {/* Value Stack + Pricing Teaser */}
       <section className="py-20 bg-muted">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
-              Get Lifetime Access
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              One-time payment. No subscriptions. Unlimited updates forever.
-            </p>
-            <Link to="/funnel/offer">
-              <Button variant="cta" size="xl">
-                See Launch Pricing
-                <ArrowRight className="h-5 w-5" />
-              </Button>
-            </Link>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
+                Get Lifetime Access
+              </h2>
+              <p className="text-lg text-muted-foreground mb-8">
+                One-time payment. No subscriptions. Unlimited updates forever.
+              </p>
+            </div>
+
+            <ValueStack />
+
+            <div className="text-center mt-8">
+              <PlatformCTA />
+              <div className="mt-4">
+                <PlatformBadges />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -479,25 +525,8 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-20 bg-gradient-primary text-primary-foreground">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Organize Your PLR Empire?
-            </h2>
-            <p className="text-lg opacity-90 mb-8">
-              Join thousands of marketers who finally took control of their digital assets.
-            </p>
-            <Link to="/funnel/offer">
-              <Button variant="warning" size="xl" className="text-warning-foreground">
-                Get PLR Organizer Pro Now
-                <ArrowRight className="h-5 w-5" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Enhanced Final CTA */}
+      <EnhancedFooterCTA />
     </div>
   );
 }
