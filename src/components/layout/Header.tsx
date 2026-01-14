@@ -42,7 +42,7 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img src={logo} alt="PLR Organizer Pro" className="h-10 w-auto" />
+          <img src={logo} alt="PLR Organizer Pro" className="h-12 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}
