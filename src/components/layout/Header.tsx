@@ -128,11 +128,6 @@ export function Header() {
           <Button variant="ghost" size="icon" onClick={toggleTheme} className="hidden sm:flex">
             {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           </Button>
-          <Link to="/auth">
-            <Button variant="ghost" className="hidden sm:flex text-muted-foreground">
-              Sign In
-            </Button>
-          </Link>
           <Link to="/funnel/offer">
             <Button variant="cta" className="hidden sm:flex">
               Get Started
@@ -193,9 +188,6 @@ export function Header() {
               Support
             </Link>
             <div className="flex gap-2 pt-4 border-t border-border">
-              <Link to="/auth" className="flex-1">
-                <Button variant="outline" className="w-full">Sign In</Button>
-              </Link>
               <Link to="/funnel/offer" className="flex-1">
                 <Button variant="cta" className="w-full">Get Started</Button>
               </Link>

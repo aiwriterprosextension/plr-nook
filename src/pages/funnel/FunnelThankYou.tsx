@@ -1,6 +1,4 @@
-import { Link } from "react-router-dom";
-import { CheckCircle, Download, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { CheckCircle, Mail } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function FunnelThankYou() {
@@ -17,7 +15,7 @@ export default function FunnelThankYou() {
             Thank You For Your Order!
           </h1>
           <p className="text-lg text-muted-foreground mb-8">
-            Your purchase of PLR Organizer Pro is complete. You're one step away from 
+            Your purchase of PLR Organizer Pro is complete. You're moments away from 
             organizing your entire PLR library.
           </p>
 
@@ -40,25 +38,19 @@ export default function FunnelThankYou() {
 
           {/* Next Step */}
           <div className="bg-muted rounded-xl p-8 mb-10">
-            <Download className="h-12 w-12 text-primary mx-auto mb-4" />
+            <Mail className="h-12 w-12 text-primary mx-auto mb-4" />
             <h2 className="text-xl font-bold text-secondary mb-2">
-              Next Step: Create Your Account
+              Check Your Email
             </h2>
-            <p className="text-muted-foreground mb-6">
-              Click the button below to create your account and access the download area.
+            <p className="text-muted-foreground">
+              We've sent your download instructions and license key to your email address. 
+              Check your inbox (and spam folder) for an email from WarriorPlus with your 
+              download link and getting started guide.
             </p>
-            <Link to="/auth?source=warriorplus">
-              <Button variant="cta" size="xl">
-                ACCESS DOWNLOAD AREA
-                <ArrowRight className="h-5 w-5" />
-              </Button>
-            </Link>
           </div>
 
           <p className="text-sm text-muted-foreground">
-            A confirmation email has been sent to your email address.
-            <br />
-            If you have any questions, contact support@plrorganizerpro.com
+            Didn't receive the email? Check your spam folder or contact support@plrorganizerpro.com
           </p>
         </div>
       </div>

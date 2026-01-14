@@ -18,10 +18,10 @@ function detectPlatform(): Platform {
 }
 
 const platformConfig = {
-  Windows: { icon: Monitor, text: "Get Instant Access for Windows" },
-  Mac: { icon: Apple, text: "Get Instant Access for Mac" },
-  Linux: { icon: Terminal, text: "Get Instant Access for Linux" },
-  Unknown: { icon: Monitor, text: "Get PLR Organizer Pro" },
+  Windows: { icon: Monitor },
+  Mac: { icon: Apple },
+  Linux: { icon: Terminal },
+  Unknown: { icon: Monitor },
 };
 
 interface PlatformCTAProps {
@@ -44,7 +44,7 @@ export function PlatformCTA({ variant = "cta", size = "xl", className = "" }: Pl
     <Link to="/funnel/offer">
       <Button variant={variant} size={size} className={className}>
         <Icon className="h-5 w-5" />
-        {config.text}
+        Get PLR Organizer Pro
         <ArrowRight className="h-5 w-5" />
       </Button>
     </Link>
