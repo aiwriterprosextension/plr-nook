@@ -14,8 +14,7 @@ import NotFound from "@/pages/NotFound";
 
 // Tool Pages
 import PLRScannerPage from "@/pages/tools/PLRScannerPage";
-import ContentSpinnerPage from "@/pages/tools/ContentSpinnerPage";
-import UniquenessMeterPage from "@/pages/tools/UniquenessMeterPage";
+import ContentTransformerPage from "@/pages/tools/ContentTransformerPage";
 import SEOAnalyzerPage from "@/pages/tools/SEOAnalyzerPage";
 import HTMLEditorPage from "@/pages/tools/HTMLEditorPage";
 import LicenseTrackerPage from "@/pages/tools/LicenseTrackerPage";
@@ -45,8 +44,7 @@ const App = () => (
               
               {/* Tool Pages */}
               <Route path="/tools/plr-scanner" element={<PLRScannerPage />} />
-              <Route path="/tools/content-spinner" element={<ContentSpinnerPage />} />
-              <Route path="/tools/uniqueness-meter" element={<UniquenessMeterPage />} />
+              <Route path="/tools/content-transformer" element={<ContentTransformerPage />} />
               <Route path="/tools/seo-analyzer" element={<SEOAnalyzerPage />} />
               <Route path="/tools/html-editor" element={<HTMLEditorPage />} />
               <Route path="/tools/license-tracker" element={<LicenseTrackerPage />} />

@@ -1,5 +1,7 @@
 # PLR Vault Pro - Blog Content Guide
 
+> **Note:** PLR Organizer Pro includes 6 specialized tools: PLR Scanner, Content Transformer, SEO Analyzer, HTML Editor, License Tracker, and Rebranding Tool.
+
 ## Content Categories
 
 ### Category 1: PLR Basics & Getting Started

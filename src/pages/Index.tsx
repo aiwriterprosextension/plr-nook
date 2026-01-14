@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { 
-  Scan, FolderOpen, FileKey, Eye, RotateCw, Search, Code, Palette,
+  Scan, FolderOpen, FileKey, Eye, Wand2, Search, Code, Palette,
   Clock, DollarSign, AlertTriangle, Archive, Check, ArrowRight,
   Users, ShoppingCart, Megaphone, GraduationCap, Play, Star, Video
 } from "lucide-react";
@@ -37,7 +37,7 @@ const features = [
 
 const tools = [
   { icon: Scan, name: "PLR Scanner", desc: "Deep scan technology finds every PLR file on your system." },
-  { icon: RotateCw, name: "Content Spinner", desc: "Transform PLR into unique content that passes plagiarism checks." },
+  { icon: Wand2, name: "Content Transformer", desc: "Check uniqueness and transform PLR into original content." },
   { icon: Search, name: "SEO Analyzer", desc: "Optimize PLR content for search engines before publishing." },
   { icon: Code, name: "HTML Editor", desc: "Edit sales pages and squeeze pages directly in the app." },
   { icon: FileKey, name: "License Tracker", desc: "Database of your rights for each PLR package." },

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown, Scan, RotateCw, Gauge, Search, Code, FileKey, Palette, BookOpen, Video, HelpCircle, Users, Sun, Moon } from "lucide-react";
+import { Menu, X, ChevronDown, Scan, Wand2, Search, Code, FileKey, Palette, BookOpen, Video, HelpCircle, Users, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -13,8 +13,7 @@ import {
 
 const tools = [
   { name: "PLR Scanner", desc: "Scan and organize your library", icon: Scan, href: "/tools/plr-scanner" },
-  { name: "Content Spinner", desc: "Make PLR unique", icon: RotateCw, href: "/tools/content-spinner" },
-  { name: "Uniqueness Meter", desc: "Verify originality", icon: Gauge, href: "/tools/uniqueness-meter" },
+  { name: "Content Transformer", desc: "Check & make PLR unique", icon: Wand2, href: "/tools/content-transformer" },
   { name: "SEO Analyzer", desc: "Optimize for rankings", icon: Search, href: "/tools/seo-analyzer" },
   { name: "HTML Editor", desc: "Edit sales pages", icon: Code, href: "/tools/html-editor" },
   { name: "License Tracker", desc: "Track usage rights", icon: FileKey, href: "/tools/license-tracker" },
