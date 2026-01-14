@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { Scan, Mail, Twitter, Facebook, Youtube } from "lucide-react";
+import { Mail, Twitter, Facebook, Youtube } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const footerLinks = {
   company: [
@@ -56,11 +57,12 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* Logo & Description */}
           <div className="col-span-2">
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-primary">
-                <Scan className="h-5 w-5 text-primary-foreground" />
-              </div>
-              <span className="text-xl font-bold">PLR Organizer Pro</span>
+            <Link to="/" className="flex items-center mb-4">
+              <img 
+                src={logo} 
+                alt="PLR Organizer Pro" 
+                className="h-10 w-auto brightness-0 invert" 
+              />
             </Link>
             <p className="text-muted-foreground text-sm mb-6 max-w-xs">
               The ultimate desktop application for organizing, managing, and maximizing your PLR content library.
