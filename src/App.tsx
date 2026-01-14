@@ -19,6 +19,7 @@ import SEOAnalyzerPage from "@/pages/tools/SEOAnalyzerPage";
 import HTMLEditorPage from "@/pages/tools/HTMLEditorPage";
 import LicenseTrackerPage from "@/pages/tools/LicenseTrackerPage";
 import RebrandingToolPage from "@/pages/tools/RebrandingToolPage";
+import ToolsPage from "@/pages/ToolsPage";
 
 // Funnel Pages
 import FunnelOffer from "@/pages/funnel/FunnelOffer";
@@ -41,6 +42,7 @@ const App = () => (
             {/* Main Website with Header/Footer */}
             <Route element={<MainLayout />}>
               <Route path="/" element={<Index />} />
+              <Route path="/tools" element={<ToolsPage />} />
               
               {/* Tool Pages */}
               <Route path="/tools/plr-scanner" element={<PLRScannerPage />} />
