@@ -104,6 +104,16 @@ export function Header() {
                       </NavigationMenuLink>
                     </li>
                   ))}
+                  <li className="md:col-span-2 border-t border-border pt-2 mt-2">
+                    <NavigationMenuLink asChild>
+                      <Link
+                        to="/tools"
+                        className="flex items-center justify-center gap-2 rounded-lg p-3 hover:bg-muted transition-colors text-primary font-medium"
+                      >
+                        View All Tools →
+                      </Link>
+                    </NavigationMenuLink>
+                  </li>
                 </ul>
               </NavigationMenuContent>
             </NavigationMenuItem>
@@ -179,6 +189,13 @@ export function Header() {
                   {tool.name}
                 </Link>
               ))}
+              <Link
+                to="/tools"
+                className="block py-2 pl-4 text-primary font-medium"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                View All Tools →
+              </Link>
             </div>
             <Link to="/pricing" className="block py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>
               Pricing
