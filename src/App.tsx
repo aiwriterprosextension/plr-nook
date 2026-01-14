@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 
 // Layouts
@@ -49,6 +49,10 @@ const App = () => (
               <Route path="/tools/html-editor" element={<HTMLEditorPage />} />
               <Route path="/tools/license-tracker" element={<LicenseTrackerPage />} />
               <Route path="/tools/rebranding-tool" element={<RebrandingToolPage />} />
+              
+              {/* SEO Redirects - Old tool URLs to new Content Transformer */}
+              <Route path="/tools/content-spinner" element={<Navigate to="/tools/content-transformer" replace />} />
+              <Route path="/tools/uniqueness-meter" element={<Navigate to="/tools/content-transformer" replace />} />
             </Route>
 
             {/* Funnel Pages (Direct Response - No Header) */}
