@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 const WARRIORPLUS_LINK = "https://warriorplus.com/plr-organizer-pro-placeholder";
 
 const proFeatures = [
-  "Advanced Content Spinner with AI rewriting",
+  "Advanced Content Transformer with AI rewriting & plagiarism detection",
   "Pro HTML Editor with drag-and-drop",
   "Bulk Rebranding Tool for images & PDFs",
   "Priority Customer Support",
