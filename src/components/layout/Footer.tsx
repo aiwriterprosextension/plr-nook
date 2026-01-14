@@ -31,20 +31,20 @@ export function Footer() {
   return (
     <footer className="bg-secondary text-secondary-foreground">
       {/* Email Signup Section */}
-      <div className="border-b border-sidebar-border">
+      <div className="bg-primary">
         <div className="container py-12">
           <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-2">Stay Updated</h3>
-            <p className="text-muted-foreground mb-6">
+            <h3 className="text-2xl font-bold mb-2 text-primary-foreground">Stay Updated</h3>
+            <p className="text-primary-foreground/80 mb-6">
               Get the latest PLR organization tips, updates, and exclusive offers.
             </p>
             <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
               <Input
                 type="email"
                 placeholder="Enter your email"
-                className="bg-sidebar-accent border-sidebar-border text-secondary-foreground placeholder:text-muted-foreground"
+                className="bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60"
               />
-              <Button variant="cta" type="submit">
+              <Button variant="secondary" type="submit">
                 Subscribe
               </Button>
             </form>
@@ -61,7 +61,7 @@ export function Footer() {
               <img 
                 src={logo} 
                 alt="PLR Organizer Pro" 
-                className="h-10 w-auto brightness-0 invert" 
+                className="h-12 w-auto brightness-0 invert" 
               />
             </Link>
             <p className="text-muted-foreground text-sm mb-6 max-w-xs">
