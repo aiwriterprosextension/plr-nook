@@ -19,6 +19,7 @@ import { BonusStack } from "@/components/landing/BonusStack";
 import { ValueStack } from "@/components/landing/ValueStack";
 import { PlatformCTA, PlatformBadges } from "@/components/landing/PlatformCTA";
 import { EnhancedFooterCTA } from "@/components/landing/EnhancedFooterCTA";
+import { FounderStory } from "@/components/landing/FounderStory";
 
 const painPoints = [
   { icon: Clock, title: "Wasted Time Searching", desc: "Hours lost digging through folders to find that one PLR package you know you bought." },
@@ -29,7 +30,7 @@ const painPoints = [
 
 const features = [
   { icon: Scan, title: "Smart PLR Detection", desc: "AI-powered scanning identifies PLR content across your entire computer automatically." },
-  { icon: FolderOpen, title: "Auto-Organization", desc: "Automatically categorize PLR by niche, type, and license—no manual work required." },
+  { icon: FolderOpen, title: "Auto-Organization", desc: "Automatically categorize PLR by niche and subniche—no manual work required. View by content type and license in virtual views." },
   { icon: FileKey, title: "License Tracking", desc: "Never violate terms again. Track exactly what rights each PLR package includes." },
   { icon: Eye, title: "Virtual Views", desc: "Preview any PLR content without extracting files. See what you have instantly." },
 ];
@@ -181,6 +182,9 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Founder Story */}
+      <FounderStory />
+
       {/* Common Mistakes Section */}
       <CommonMistakes />
 
@@ -261,8 +265,8 @@ export default function Index() {
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-secondary mb-4">Automatic Organization</h3>
                       <p className="text-muted-foreground mb-4">
-                        Let the app do the heavy lifting. PLR content is automatically sorted into logical 
-                        categories based on niche, content type, and license restrictions.
+                        Choose your base folder location, review auto-detected niches and subniches for each package, 
+                        then move or copy entire packages to your organized folder structure. Packages stay intact—never broken up.
                       </p>
                       <ul className="space-y-2">
                         <li className="flex items-center gap-2"><Check className="h-5 w-5 text-primary" /> 50+ niche categories</li>
@@ -284,12 +288,12 @@ export default function Index() {
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-secondary mb-4">Virtual Views System</h3>
                       <p className="text-muted-foreground mb-4">
-                        Preview any PLR package without extracting a single file. View PDFs, images, videos, 
-                        and documents right within the app.
+                        Once organized, virtual views let you see your library filtered by content type, license rights, 
+                        format, and more—without physically moving files again. It's like having multiple filing systems in one.
                       </p>
                       <ul className="space-y-2">
+                        <li className="flex items-center gap-2"><Check className="h-5 w-5 text-primary" /> Filter by content type & license</li>
                         <li className="flex items-center gap-2"><Check className="h-5 w-5 text-primary" /> Instant file previews</li>
-                        <li className="flex items-center gap-2"><Check className="h-5 w-5 text-primary" /> ZIP file navigation</li>
                         <li className="flex items-center gap-2"><Check className="h-5 w-5 text-primary" /> Quick content assessment</li>
                       </ul>
                     </div>

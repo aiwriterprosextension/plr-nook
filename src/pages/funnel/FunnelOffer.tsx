@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Check, Shield, Clock, ArrowRight, Play, Star, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -18,7 +18,7 @@ const valueStack = [
 
 const features = [
   "Scan your entire computer for PLR in minutes",
-  "Automatically organize by niche & content type",
+  "Automatically organize by niche and subniche",
   "Track licenses for every PLR package",
   "Preview files without extracting",
   "Detect duplicate purchases instantly",
@@ -101,12 +101,12 @@ export default function FunnelOffer() {
 
           {/* Buy Button */}
           <div className="text-center mb-16">
-            <a href={WARRIORPLUS_LINK} target="_blank" rel="noopener noreferrer">
+            <Link to="/funnel/oto1">
               <Button variant="funnelBuy" size="xl" className="px-12 py-8 text-xl">
                 YES! Give Me Instant Access - Only $27
                 <ArrowRight className="h-6 w-6" />
               </Button>
-            </a>
+            </Link>
             <p className="mt-4 text-sm text-muted-foreground">
               <Shield className="h-4 w-4 inline mr-1" />
               Secure checkout powered by WarriorPlus
@@ -132,7 +132,7 @@ export default function FunnelOffer() {
               <h2 className="text-2xl font-bold text-success mb-6">The Solution...</h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>PLR Organizer Pro scans your entire computer and automatically finds every PLR package you own.</p>
-                <p>Then it organizes everything by niche, content type, and license rights—so you can finally USE what you paid for.</p>
+                <p>Then it organizes everything by niche and subniche—so you can finally USE what you paid for. Plus, powerful virtual views let you filter by content type, license rights, and more without moving a single file.</p>
                 <p>No more searching. No more duplicate purchases. No more wasted money.</p>
                 <p className="font-semibold text-foreground">Just click, scan, and organize.</p>
               </div>
@@ -189,12 +189,12 @@ export default function FunnelOffer() {
 
           {/* Buy Button */}
           <div className="text-center mt-10">
-            <a href={WARRIORPLUS_LINK} target="_blank" rel="noopener noreferrer">
+            <Link to="/funnel/oto1">
               <Button variant="funnelBuy" size="xl" className="px-12 py-8 text-xl">
                 Get Instant Access Now - $27
                 <ArrowRight className="h-6 w-6" />
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -246,12 +246,12 @@ export default function FunnelOffer() {
           <p className="text-lg opacity-90 mb-8">
             Get PLR Organizer Pro now and finally take control of your digital assets.
           </p>
-          <a href={WARRIORPLUS_LINK} target="_blank" rel="noopener noreferrer">
+          <Link to="/funnel/oto1">
             <Button variant="warning" size="xl" className="text-warning-foreground px-12 py-8 text-xl">
               Yes! I Want PLR Organizer Pro - $27
               <ArrowRight className="h-6 w-6" />
             </Button>
-          </a>
+          </Link>
         </div>
       </section>
 

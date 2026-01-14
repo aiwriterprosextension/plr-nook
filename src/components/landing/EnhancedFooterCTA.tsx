@@ -50,7 +50,7 @@ export function EnhancedFooterCTA() {
           <Link to="/funnel/offer">
             <Button variant="warning" size="xl" className="text-warning-foreground mb-6">
               <Rocket className="h-5 w-5" />
-              Yes! Organize My PLR Library Now — $27
+              Get PLR Organizer Pro — $27
               <ArrowRight className="h-5 w-5" />
             </Button>
           </Link>

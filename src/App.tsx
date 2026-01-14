@@ -11,7 +11,6 @@ import { MainLayout } from "@/components/layout/MainLayout";
 // Main Pages
 import Index from "@/pages/Index";
 import NotFound from "@/pages/NotFound";
-import Auth from "@/pages/Auth";
 
 // Tool Pages
 import PLRScannerPage from "@/pages/tools/PLRScannerPage";
@@ -29,14 +28,6 @@ import FunnelOTO1DS from "@/pages/funnel/FunnelOTO1DS";
 import FunnelOTO2 from "@/pages/funnel/FunnelOTO2";
 import FunnelOTO2DS from "@/pages/funnel/FunnelOTO2DS";
 import FunnelThankYou from "@/pages/funnel/FunnelThankYou";
-
-// Dashboard Pages
-import Dashboard from "@/pages/dashboard/Dashboard";
-import DashboardOverview from "@/pages/dashboard/DashboardOverview";
-import DashboardDownload from "@/pages/dashboard/DashboardDownload";
-import DashboardSettings from "@/pages/dashboard/DashboardSettings";
-import DashboardLicense from "@/pages/dashboard/DashboardLicense";
-import DashboardHelp from "@/pages/dashboard/DashboardHelp";
 
 const queryClient = new QueryClient();
 
@@ -62,9 +53,6 @@ const App = () => (
               <Route path="/tools/rebranding-tool" element={<RebrandingToolPage />} />
             </Route>
 
-            {/* Auth Pages (No Header/Footer) */}
-            <Route path="/auth" element={<Auth />} />
-
             {/* Funnel Pages (Direct Response - No Header) */}
             <Route path="/funnel/offer" element={<FunnelOffer />} />
             <Route path="/funnel/oto1" element={<FunnelOTO1 />} />
@@ -72,15 +60,6 @@ const App = () => (
             <Route path="/funnel/oto2" element={<FunnelOTO2 />} />
             <Route path="/funnel/oto2-ds" element={<FunnelOTO2DS />} />
             <Route path="/funnel/thank-you" element={<FunnelThankYou />} />
-
-            {/* Dashboard (Sidebar Layout) */}
-            <Route path="/dashboard" element={<Dashboard />}>
-              <Route index element={<DashboardOverview />} />
-              <Route path="download" element={<DashboardDownload />} />
-              <Route path="settings" element={<DashboardSettings />} />
-              <Route path="license" element={<DashboardLicense />} />
-              <Route path="help" element={<DashboardHelp />} />
-            </Route>
 
             {/* Catch-all */}
             <Route path="*" element={<NotFound />} />
