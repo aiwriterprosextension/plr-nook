@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown, Scan, Wand2, Search, Code, FileKey, Palette, BookOpen, Video, HelpCircle, Users, Sun, Moon } from "lucide-react";
+import logo from "@/assets/logo.png";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
@@ -40,11 +41,8 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2">
-          <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-primary">
-            <Scan className="h-5 w-5 text-primary-foreground" />
-          </div>
-          <span className="text-xl font-bold text-secondary">PLR Organizer Pro</span>
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="PLR Organizer Pro" className="h-10 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}
