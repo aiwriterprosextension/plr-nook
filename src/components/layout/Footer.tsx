@@ -44,10 +44,22 @@ export function Footer() {
                 placeholder="Enter your email"
                 className="bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60"
               />
-              <Button variant="secondary" type="submit">
+              <Button 
+                variant="secondary" 
+                type="submit"
+                className="transition-all duration-200 hover:scale-105 hover:shadow-lg"
+              >
                 Subscribe
               </Button>
             </form>
+            <p className="text-primary-foreground/70 text-sm mt-4 flex items-center justify-center gap-2">
+              <span className="inline-flex items-center gap-1">
+                <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                12,847 subscribers
+              </span>
+              <span className="text-primary-foreground/50">•</span>
+              <span>Weekly tips & exclusive offers</span>
+            </p>
           </div>
         </div>
       </div>
