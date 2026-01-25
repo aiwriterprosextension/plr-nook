@@ -22,6 +22,12 @@ import LicenseTrackerPage from "@/pages/tools/LicenseTrackerPage";
 import RebrandingToolPage from "@/pages/tools/RebrandingToolPage";
 import ToolsPage from "@/pages/ToolsPage";
 
+// Legal Pages
+import PrivacyPolicy from "@/pages/legal/PrivacyPolicy";
+import TermsOfService from "@/pages/legal/TermsOfService";
+import CookiePolicy from "@/pages/legal/CookiePolicy";
+import RefundPolicy from "@/pages/legal/RefundPolicy";
+
 // Funnel Pages
 import FunnelOffer from "@/pages/funnel/FunnelOffer";
 import FunnelOTO1 from "@/pages/funnel/FunnelOTO1";
@@ -57,6 +63,12 @@ const App = () => (
               {/* SEO Redirects - Old tool URLs to new Content Transformer */}
               <Route path="/tools/content-spinner" element={<Navigate to="/tools/content-transformer" replace />} />
               <Route path="/tools/uniqueness-meter" element={<Navigate to="/tools/content-transformer" replace />} />
+
+              {/* Legal Pages */}
+              <Route path="/privacy" element={<PrivacyPolicy />} />
+              <Route path="/terms" element={<TermsOfService />} />
+              <Route path="/cookies" element={<CookiePolicy />} />
+              <Route path="/refund" element={<RefundPolicy />} />
             </Route>
 
             {/* Funnel Pages (Direct Response - No Header) */}
