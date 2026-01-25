@@ -164,7 +164,7 @@ export default function About() {
               
               <div className="space-y-6 text-muted-foreground">
                 <p>
-                  PLR Organizer Pro started as a personal project in 2022. After spending countless 
+                  PLR Organizer Pro started as a personal project in 2025. After spending countless 
                   hours trying to organize a library of over 5,000 PLR products accumulated over 8 years, 
                   John realized there had to be a better way.
                 </p>

@@ -7,17 +7,13 @@ import logo from "@/assets/logo.png";
 const footerLinks = {
   company: [
     { name: "About Us", href: "/about" },
-    { name: "Careers", href: "/careers" },
-    { name: "Press", href: "/press" },
     { name: "Contact", href: "/contact" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy" },
     { name: "Terms of Service", href: "/terms" },
     { name: "Cookie Policy", href: "/cookies" },
-    { name: "GDPR Compliance", href: "/gdpr" },
     { name: "Refund Policy", href: "/refund" },
-    { name: "Affiliate Disclosure", href: "/affiliate" },
   ],
   resources: [
     { name: "Documentation", href: "/docs" },
