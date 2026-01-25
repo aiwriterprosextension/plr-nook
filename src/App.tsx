@@ -10,6 +10,7 @@ import { MainLayout } from "@/components/layout/MainLayout";
 
 // Main Pages
 import Index from "@/pages/Index";
+import About from "@/pages/About";
 import NotFound from "@/pages/NotFound";
 
 // Tool Pages
@@ -42,6 +43,7 @@ const App = () => (
             {/* Main Website with Header/Footer */}
             <Route element={<MainLayout />}>
               <Route path="/" element={<Index />} />
+              <Route path="/about" element={<About />} />
               <Route path="/tools" element={<ToolsPage />} />
               
               {/* Tool Pages */}
