@@ -19,7 +19,6 @@ import { BonusStack } from "@/components/landing/BonusStack";
 import { ValueStack } from "@/components/landing/ValueStack";
 import { PlatformCTA, PlatformBadges } from "@/components/landing/PlatformCTA";
 import { EnhancedFooterCTA } from "@/components/landing/EnhancedFooterCTA";
-import { FounderStory } from "@/components/landing/FounderStory";
 
 const painPoints = [
   { icon: Clock, title: "Wasted Time Searching", desc: "Hours lost digging through folders to find that one PLR package you know you bought." },
@@ -181,9 +180,6 @@ export default function Index() {
           </div>
         </div>
       </section>
-
-      {/* Founder Story */}
-      <FounderStory />
 
       {/* Common Mistakes Section */}
       <CommonMistakes />
