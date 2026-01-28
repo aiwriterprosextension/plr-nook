@@ -12,7 +12,7 @@ const valueStack = [
   { item: "Smart PLR Detection Engine", value: "$97" },
   { item: "Auto-Niche Organization System", value: "$67" },
   { item: "Virtual Views Preview System", value: "$47" },
-  { item: "6 Built-in Power Tools", value: "$147" },
+  { item: "4 Built-in Power Tools", value: "$97" },
   { item: "Lifetime Updates", value: "$97" },
 ];
 
@@ -22,7 +22,7 @@ const features = [
   "Track licenses for every PLR package",
   "Preview files without extracting",
   "Detect duplicate purchases instantly",
-  "6 built-in tools: Content Transformer, SEO, HTML Editor & more",
+  "4 built-in tools: Scanner, Content Transformer, HTML Editor & License Tracker",
   "Works on Windows, Mac & Linux",
   "No monthly fees – lifetime access",
 ];
