@@ -8,7 +8,7 @@ const WARRIORPLUS_LINK = "https://warriorplus.com/plr-organizer-pro-placeholder"
 const proFeatures = [
   "Advanced Content Transformer with AI rewriting & plagiarism detection",
   "Pro HTML Editor with drag-and-drop",
-  "Bulk Rebranding Tool for images & PDFs",
+  "Enhanced License Tracker with export features",
   "Priority Customer Support",
   "Commercial Developer License",
   "Early Access to New Features",
