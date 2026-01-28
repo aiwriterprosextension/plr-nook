@@ -24,22 +24,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://plr-nook.lovable.app/tools/seo-analyzer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://plr-nook.lovable.app/tools/html-editor</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://plr-nook.lovable.app/tools/license-tracker</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://plr-nook.lovable.app/tools/rebranding-tool</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
