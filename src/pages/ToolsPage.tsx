@@ -3,10 +3,8 @@ import { Link } from "react-router-dom";
 import { 
   Search, 
   Wand2, 
-  BarChart3, 
   Code, 
   FileCheck, 
-  Palette,
   ArrowRight
 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -30,14 +28,6 @@ const tools = [
     bgColor: "bg-purple-500/10"
   },
   {
-    name: "SEO Analyzer",
-    description: "Optimize your PLR content for search engines. Get keyword suggestions, readability scores, and actionable SEO recommendations.",
-    icon: BarChart3,
-    href: "/tools/seo-analyzer",
-    color: "text-green-500",
-    bgColor: "bg-green-500/10"
-  },
-  {
     name: "HTML Editor",
     description: "Professional HTML editing for PLR sales pages and content. Visual editor with live preview and clean code output.",
     icon: Code,
@@ -52,14 +42,6 @@ const tools = [
     href: "/tools/license-tracker",
     color: "text-cyan-500",
     bgColor: "bg-cyan-500/10"
-  },
-  {
-    name: "Rebranding Tool",
-    description: "Transform generic PLR into branded content. Bulk find-and-replace, customize branding elements, and make content uniquely yours.",
-    icon: Palette,
-    href: "/tools/rebranding-tool",
-    color: "text-pink-500",
-    bgColor: "bg-pink-500/10"
   }
 ];
 
@@ -67,10 +49,10 @@ const ToolsPage = () => {
   return (
     <>
       <Helmet>
-        <title>PLR Tools - 6 Powerful Tools for PLR Content Management</title>
+        <title>PLR Tools - 4 Powerful Tools for PLR Content Management</title>
         <meta 
           name="description" 
-          content="Discover our suite of 6 specialized PLR tools: Scanner, Content Transformer, SEO Analyzer, HTML Editor, License Tracker, and Rebranding Tool." 
+          content="Discover our suite of 4 specialized PLR tools: Scanner, Content Transformer, HTML Editor, and License Tracker." 
         />
         <link rel="canonical" href="https://plr-nook.lovable.app/tools" />
       </Helmet>
@@ -83,7 +65,7 @@ const ToolsPage = () => {
               PLR Organizer Pro Tools
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Six specialized tools designed to help you scan, transform, optimize, and profit from PLR content.
+              Four specialized tools designed to help you scan, transform, edit, and organize PLR content.
             </p>
           </div>
         </section>
@@ -127,7 +109,7 @@ const ToolsPage = () => {
               Ready to Transform Your PLR Business?
             </h2>
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-              Get access to all 6 tools and start turning PLR content into profitable digital products today.
+              Get access to all 4 tools and start turning PLR content into profitable digital products today.
             </p>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
               <Link to="/funnel/offer">Get Started Now</Link>

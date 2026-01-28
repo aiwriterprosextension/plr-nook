@@ -16,10 +16,8 @@ import NotFound from "@/pages/NotFound";
 // Tool Pages
 import PLRScannerPage from "@/pages/tools/PLRScannerPage";
 import ContentTransformerPage from "@/pages/tools/ContentTransformerPage";
-import SEOAnalyzerPage from "@/pages/tools/SEOAnalyzerPage";
 import HTMLEditorPage from "@/pages/tools/HTMLEditorPage";
 import LicenseTrackerPage from "@/pages/tools/LicenseTrackerPage";
-import RebrandingToolPage from "@/pages/tools/RebrandingToolPage";
 import ToolsPage from "@/pages/ToolsPage";
 
 // Legal Pages
@@ -55,10 +53,8 @@ const App = () => (
               {/* Tool Pages */}
               <Route path="/tools/plr-scanner" element={<PLRScannerPage />} />
               <Route path="/tools/content-transformer" element={<ContentTransformerPage />} />
-              <Route path="/tools/seo-analyzer" element={<SEOAnalyzerPage />} />
               <Route path="/tools/html-editor" element={<HTMLEditorPage />} />
               <Route path="/tools/license-tracker" element={<LicenseTrackerPage />} />
-              <Route path="/tools/rebranding-tool" element={<RebrandingToolPage />} />
               
               {/* SEO Redirects - Old tool URLs to new Content Transformer */}
               <Route path="/tools/content-spinner" element={<Navigate to="/tools/content-transformer" replace />} />
