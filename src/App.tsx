@@ -12,6 +12,7 @@ import { MainLayout } from "@/components/layout/MainLayout";
 import Index from "@/pages/Index";
 import About from "@/pages/About";
 import NotFound from "@/pages/NotFound";
+import InstallPage from "@/pages/InstallPage";
 
 // Tool Pages
 import PLRScannerPage from "@/pages/tools/PLRScannerPage";
@@ -65,6 +66,7 @@ const App = () => (
               <Route path="/terms" element={<TermsOfService />} />
               <Route path="/cookies" element={<CookiePolicy />} />
               <Route path="/refund" element={<RefundPolicy />} />
+              <Route path="/install" element={<InstallPage />} />
             </Route>
 
             {/* Funnel Pages (Direct Response - No Header) */}

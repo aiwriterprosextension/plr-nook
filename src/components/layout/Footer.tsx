@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import { Mail, Twitter, Facebook, Youtube } from "lucide-react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
 const footerLinks = {
@@ -26,40 +24,6 @@ const footerLinks = {
 export function Footer() {
   return (
     <footer className="bg-secondary text-secondary-foreground">
-      {/* Email Signup Section */}
-      <div className="bg-primary">
-        <div className="container py-12">
-          <div className="max-w-2xl mx-auto text-center">
-            <h3 className="text-2xl font-bold mb-2 text-primary-foreground">Stay Updated</h3>
-            <p className="text-primary-foreground/80 mb-6">
-              Get the latest PLR organization tips, updates, and exclusive offers.
-            </p>
-            <form className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                className="bg-white/10 border-white/20 text-primary-foreground placeholder:text-primary-foreground/60"
-              />
-              <Button 
-                variant="secondary" 
-                type="submit"
-                className="transition-all duration-200 hover:scale-105 hover:shadow-lg"
-              >
-                Subscribe
-              </Button>
-            </form>
-            <p className="text-primary-foreground/70 text-sm mt-4 flex items-center justify-center gap-2">
-              <span className="inline-flex items-center gap-1">
-                <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                12,847 subscribers
-              </span>
-              <span className="text-primary-foreground/50">•</span>
-              <span>Weekly tips & exclusive offers</span>
-            </p>
-          </div>
-        </div>
-      </div>
-
       {/* Main Footer Content */}
       <div className="container py-12">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
