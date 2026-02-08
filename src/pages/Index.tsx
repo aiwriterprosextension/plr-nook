@@ -19,6 +19,7 @@ import { BonusStack } from "@/components/landing/BonusStack";
 import { ValueStack } from "@/components/landing/ValueStack";
 import { PlatformCTA, PlatformBadges } from "@/components/landing/PlatformCTA";
 import { EnhancedFooterCTA } from "@/components/landing/EnhancedFooterCTA";
+import { PWAInstallBanner } from "@/components/landing/PWAInstallBanner";
 
 const painPoints = [
   { icon: Clock, title: "Wasted Time Searching", desc: "Hours lost digging through folders to find that one PLR package you know you bought." },
@@ -525,6 +526,7 @@ export default function Index() {
 
       {/* Enhanced Final CTA */}
       <EnhancedFooterCTA />
+      <PWAInstallBanner />
     </div>
   );
 }
