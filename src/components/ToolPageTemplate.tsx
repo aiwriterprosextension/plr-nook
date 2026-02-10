@@ -111,7 +111,7 @@ export function ToolPageTemplate({
         title={seoTitle}
         description={seoDescription}
         keywords={seoKeywords}
-        canonicalUrl={`https://plrorganizerpro.com${canonicalPath}`}
+        canonicalUrl={`https://plr-nook.lovable.app${canonicalPath}`}
         jsonLd={jsonLd}
       />
       
@@ -140,10 +140,6 @@ export function ToolPageTemplate({
                     <ArrowRight className="h-5 w-5" />
                   </Button>
                 </Link>
-                <Button variant="outlineGhost" size="xl">
-                  <Play className="h-5 w-5" />
-                  Watch Demo
-                </Button>
               </div>
             </div>
           </div>
@@ -288,11 +284,11 @@ export function ToolPageTemplate({
                 Ready to Use {toolName}?
               </h2>
               <p className="text-lg opacity-90 mb-8">
-                Get instant access to {toolName} and all 5 other powerful tools included with PLR Organizer Pro.
+                Get instant access to {toolName} and all 3 other powerful tools included with PLR Organizer Pro.
               </p>
               <Link to="/funnel/offer">
                 <Button variant="warning" size="xl" className="text-warning-foreground">
-                  Get All 6 Tools for Just $27
+                  Get All 4 Tools for Just $27
                   <ArrowRight className="h-5 w-5" />
                 </Button>
               </Link>
