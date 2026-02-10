@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import { 
   Scan, FolderOpen, FileKey, Eye, Wand2, Code,
   Clock, DollarSign, AlertTriangle, Archive, Check, ArrowRight,
-  Users, ShoppingCart, Megaphone, GraduationCap, Play, Star, Video
+  Users, ShoppingCart, Megaphone, GraduationCap, Play, Star
 } from "lucide-react";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -91,6 +92,21 @@ const howItWorks = [
 export default function Index() {
   return (
     <div className="flex flex-col">
+      <SEOHead
+        title="Organize Your PLR Library in Minutes"
+        description="The only desktop app that scans your entire computer, automatically organizes PLR by niche, tracks licenses, and eliminates duplicate purchases forever."
+        keywords="PLR organizer, PLR content management, organize PLR files, PLR scanner, digital content organization"
+        canonicalUrl="https://plr-nook.lovable.app/"
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "PLR Organizer Pro",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Windows, macOS, Linux",
+          "offers": { "@type": "Offer", "price": "27.00", "priceCurrency": "USD" },
+          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "1250" }
+        }}
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-hero py-20 lg:py-32">
         <div className="container relative z-10">
@@ -116,10 +132,12 @@ export default function Index() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in">
               <PlatformCTA />
-              <Button variant="outlineGhost" size="xl">
-                <Play className="h-5 w-5" />
-                Watch Demo Video
-              </Button>
+              <Link to="/funnel/offer">
+                <Button variant="outlineGhost" size="xl">
+                  <Play className="h-5 w-5" />
+                  See How It Works
+                </Button>
+              </Link>
             </div>
 
             {/* Trust Badges */}
@@ -302,7 +320,7 @@ export default function Index() {
             <TabsContent value="tools" className="mt-8">
               <Card>
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-secondary mb-6">6 Built-in Power Tools</h3>
+                  <h3 className="text-2xl font-bold text-secondary mb-6">4 Built-in Power Tools</h3>
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {tools.map((tool, i) => (
                       <div key={i} className="flex items-start gap-3 p-4 bg-muted rounded-lg">
@@ -329,10 +347,7 @@ export default function Index() {
               Get Organized in 3 Simple Steps
             </h2>
             <p className="text-muted-foreground">
-              <a href="#" className="text-primary hover:underline inline-flex items-center gap-1">
-                <Video className="h-4 w-4" />
-                See Full Installation Video
-              </a>
+              <span className="text-muted-foreground">Up and running in under 2 minutes</span>
             </p>
           </div>
           

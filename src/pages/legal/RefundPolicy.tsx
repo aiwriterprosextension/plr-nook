@@ -5,7 +5,7 @@ export default function RefundPolicy() {
     <>
       <SEOHead
         title="Refund Policy | PLR Organizer Pro"
-        description="Learn about our refund policy and money-back guarantee for PLR Organizer Pro software purchases."
+        description="Learn about our 7-day money-back guarantee for PLR Organizer Pro software purchases."
         keywords="refund policy, money back guarantee, PLR Organizer Pro, returns"
       />
 
@@ -18,7 +18,7 @@ export default function RefundPolicy() {
             <section>
               <h2 className="text-2xl font-semibold text-secondary mb-4">Our Guarantee</h2>
               <p className="text-muted-foreground">
-                At PLR Organizer Pro, we stand behind our software with a <strong>30-day money-back guarantee</strong>. If you're not completely satisfied with your purchase, we'll provide a full refund—no questions asked.
+                At PLR Organizer Pro, we stand behind our software with a <strong>7-day money-back guarantee</strong>. If you're not completely satisfied with your purchase, we'll provide a full refund—no questions asked.
               </p>
             </section>
 
@@ -28,7 +28,7 @@ export default function RefundPolicy() {
                 You are eligible for a full refund if:
               </p>
               <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Your refund request is made within 30 days of the original purchase date</li>
+                <li>Your refund request is made within 7 days of the original purchase date</li>
                 <li>You purchased the software directly from our website or authorized resellers</li>
                 <li>This is your first refund request for this product</li>
               </ul>
@@ -68,7 +68,7 @@ export default function RefundPolicy() {
                 Refunds may not be available in the following cases:
               </p>
               <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                <li>Requests made after the 30-day guarantee period</li>
+                <li>Requests made after the 7-day guarantee period</li>
                 <li>Purchases made through unauthorized third-party sellers</li>
                 <li>Multiple refund requests for the same product</li>
                 <li>Evidence of license abuse or terms of service violations</li>
@@ -78,7 +78,7 @@ export default function RefundPolicy() {
             <section>
               <h2 className="text-2xl font-semibold text-secondary mb-4">Upgrades and Add-ons</h2>
               <p className="text-muted-foreground">
-                Upgrades and add-on purchases are also covered by our 30-day guarantee. If you purchased an upgrade within 30 days, you can request a refund for the upgrade amount. The original license will remain active.
+                Upgrades and add-on purchases are also covered by our 7-day guarantee. If you purchased an upgrade within 7 days, you can request a refund for the upgrade amount. The original license will remain active.
               </p>
             </section>
 
