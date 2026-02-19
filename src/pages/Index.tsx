@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { 
-  Scan, FolderOpen, FileKey, Eye, Wand2, Code,
+  Scan, FolderOpen, FileKey, Eye, Wand2, Code, Search, Languages, Palette,
   Clock, DollarSign, AlertTriangle, Archive, Check, ArrowRight,
   Users, ShoppingCart, Megaphone, GraduationCap, Play, Star
 } from "lucide-react";
@@ -37,10 +37,12 @@ const features = [
 ];
 
 const tools = [
-  { icon: Scan, name: "PLR Scanner", desc: "Deep scan technology finds every PLR file on your system." },
-  { icon: Wand2, name: "Content Transformer", desc: "Check uniqueness and transform PLR into original content." },
-  { icon: Code, name: "HTML Editor", desc: "Edit sales pages and squeeze pages directly in the app." },
-  { icon: FileKey, name: "License Tracker", desc: "Database of your rights for each PLR package." },
+  { icon: Wand2, name: "Content Spinner", desc: "Transform generic PLR into 100% unique content with AI." },
+  { icon: Search, name: "SEO Analyzer", desc: "Optimize your PLR content for search engine rankings." },
+  { icon: Code, name: "HTML Editor", desc: "Create & format website content without coding skills." },
+  { icon: FileKey, name: "License Tracker", desc: "Track usage rights and expiration dates for all licenses." },
+  { icon: Languages, name: "Multi-Language Translator", desc: "Convert PLR content into 27 different languages." },
+  { icon: Palette, name: "Brand Kit Tool", desc: "Apply consistent branding across all PLR content." },
 ];
 
 const targetAudience = [
@@ -320,7 +322,7 @@ export default function Index() {
             <TabsContent value="tools" className="mt-8">
               <Card>
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-secondary mb-6">4 Built-in Power Tools</h3>
+                  <h3 className="text-2xl font-bold text-secondary mb-6">6 Built-in Power Tools</h3>
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {tools.map((tool, i) => (
                       <div key={i} className="flex items-start gap-3 p-4 bg-muted rounded-lg">
