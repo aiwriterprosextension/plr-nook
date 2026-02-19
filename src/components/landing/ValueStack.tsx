@@ -5,7 +5,7 @@ const valueItems = [
   { item: "Software License", value: "$197" },
   { item: "Lifetime Updates", value: "$97/year" },
   { item: "Priority Support", value: "$47/year" },
-  { item: "4 Built-in Power Tools", value: "$97" },
+  { item: "6 Built-in Power Tools", value: "$197" },
 ];
 
 export function ValueStack() {
@@ -31,7 +31,7 @@ export function ValueStack() {
         <div className="border-t-2 border-dashed border-border pt-4 space-y-2">
           <div className="flex justify-between items-center">
             <span className="font-bold text-secondary">TOTAL VALUE:</span>
-            <span className="font-bold text-secondary">$438+</span>
+            <span className="font-bold text-secondary">$538+</span>
           </div>
           <div className="flex justify-between items-center text-primary">
             <span className="font-extrabold text-lg">TODAY'S PRICE:</span>
@@ -39,7 +39,7 @@ export function ValueStack() {
           </div>
           <div className="flex justify-between items-center text-success">
             <span className="font-bold">YOU SAVE:</span>
-            <span className="font-bold">$411 (93% OFF!)</span>
+            <span className="font-bold">$511 (95% OFF!)</span>
           </div>
         </div>
       </CardContent>

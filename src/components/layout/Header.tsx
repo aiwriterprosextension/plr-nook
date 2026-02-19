@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, Scan, Wand2, Code, FileKey, Sun, Moon } from "lucide-react";
+import { Menu, X, Wand2, Search, Code, FileKey, Languages, Palette, Sun, Moon } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { Button } from "@/components/ui/button";
 import {
@@ -13,10 +13,12 @@ import {
 } from "@/components/ui/navigation-menu";
 
 const tools = [
-  { name: "PLR Scanner", desc: "Scan and organize your library", icon: Scan, href: "/tools/plr-scanner" },
-  { name: "Content Transformer", desc: "Check & make PLR unique", icon: Wand2, href: "/tools/content-transformer" },
+  { name: "Content Spinner", desc: "Make PLR content unique", icon: Wand2, href: "/tools/content-spinner" },
+  { name: "SEO Analyzer", desc: "Optimize for search engines", icon: Search, href: "/tools/seo-analyzer" },
   { name: "HTML Editor", desc: "Edit sales pages", icon: Code, href: "/tools/html-editor" },
   { name: "License Tracker", desc: "Track usage rights", icon: FileKey, href: "/tools/license-tracker" },
+  { name: "Multi-Language Translator", desc: "Translate into 27 languages", icon: Languages, href: "/tools/multi-language-translator" },
+  { name: "Brand Kit Tool", desc: "Consistent brand identity", icon: Palette, href: "/tools/brand-kit" },
 ];
 
 export function Header() {
@@ -62,7 +64,7 @@ export function Header() {
             <NavigationMenuItem>
               <NavigationMenuTrigger className="bg-transparent">Tools</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-2 p-4 md:grid-cols-2">
+                <ul className="grid w-[500px] gap-2 p-4 md:grid-cols-2">
                   {tools.map((tool) => (
                     <li key={tool.name}>
                       <NavigationMenuLink asChild>
