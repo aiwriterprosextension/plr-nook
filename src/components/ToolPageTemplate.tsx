@@ -111,7 +111,7 @@ export function ToolPageTemplate({
         title={seoTitle}
         description={seoDescription}
         keywords={seoKeywords}
-        canonicalUrl={`https://plr-nook.lovable.app${canonicalPath}`}
+        canonicalUrl={`https://plrorganizerpro.com${canonicalPath}`}
         jsonLd={jsonLd}
       />
       
@@ -140,6 +140,10 @@ export function ToolPageTemplate({
                     <ArrowRight className="h-5 w-5" />
                   </Button>
                 </Link>
+                <Button variant="outlineGhost" size="xl">
+                  <Play className="h-5 w-5" />
+                  Watch Demo
+                </Button>
               </div>
             </div>
           </div>

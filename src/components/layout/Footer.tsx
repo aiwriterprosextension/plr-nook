@@ -5,13 +5,19 @@ import logo from "@/assets/logo.png";
 const footerLinks = {
   company: [
     { name: "About Us", href: "/about" },
-    { name: "Tools", href: "/tools" },
+    { name: "Contact", href: "/contact" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy" },
     { name: "Terms of Service", href: "/terms" },
     { name: "Cookie Policy", href: "/cookies" },
     { name: "Refund Policy", href: "/refund" },
+  ],
+  resources: [
+    { name: "Documentation", href: "/docs" },
+    { name: "Video Tutorials", href: "/resources/tutorials" },
+    { name: "Knowledge Base", href: "/resources/knowledge-base" },
+    { name: "Blog", href: "/blog" },
   ],
 };
 
@@ -20,7 +26,7 @@ export function Footer() {
     <footer className="bg-secondary text-secondary-foreground">
       {/* Main Footer Content */}
       <div className="container py-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* Logo & Description */}
           <div className="col-span-2">
             <Link to="/" className="flex items-center mb-4">
@@ -77,6 +83,19 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Resources Links */}
+          <div>
+            <h4 className="font-semibold mb-4">Resources</h4>
+            <ul className="space-y-3">
+              {footerLinks.resources.map((link) => (
+                <li key={link.name}>
+                  <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 

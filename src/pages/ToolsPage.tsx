@@ -1,12 +1,10 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { 
-  Wand2, 
   Search, 
+  Wand2, 
   Code, 
   FileCheck, 
-  Languages, 
-  Palette,
   ArrowRight
 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -14,24 +12,24 @@ import { Button } from "@/components/ui/button";
 
 const tools = [
   {
-    name: "Content Spinner",
-    description: "Transform generic PLR into 100% unique content. AI-powered rewriting with adjustable uniqueness levels and brand voice preservation.",
-    icon: Wand2,
-    href: "/tools/content-spinner",
-    color: "text-purple-500",
-    bgColor: "bg-purple-500/10"
-  },
-  {
-    name: "SEO Analyzer",
-    description: "Get tailored SEO recommendations to help your PLR content rank higher. PLR-specific scoring, keyword optimization, and readability assessment.",
+    name: "PLR Scanner",
+    description: "Instantly analyze any PLR package for quality, licensing terms, and commercial viability. Get detailed reports on content value and resale potential.",
     icon: Search,
-    href: "/tools/seo-analyzer",
+    href: "/tools/plr-scanner",
     color: "text-blue-500",
     bgColor: "bg-blue-500/10"
   },
   {
+    name: "Content Transformer",
+    description: "Check PLR content for uniqueness and transform it into 100% original content. AI-powered rewriting with real-time plagiarism detection.",
+    icon: Wand2,
+    href: "/tools/content-transformer",
+    color: "text-purple-500",
+    bgColor: "bg-purple-500/10"
+  },
+  {
     name: "HTML Editor",
-    description: "Create & format website content without coding skills. WYSIWYG editing, drag-and-drop media insertion, and responsive design tools.",
+    description: "Professional HTML editing for PLR sales pages and content. Visual editor with live preview and clean code output.",
     icon: Code,
     href: "/tools/html-editor",
     color: "text-orange-500",
@@ -39,27 +37,11 @@ const tools = [
   },
   {
     name: "License Tracker",
-    description: "Never risk copyright issues with your PLR content. Track usage rights, restrictions, and expiration dates for all your licenses.",
+    description: "Never lose track of your PLR licenses again. Organize, search, and manage all your license terms in one secure location.",
     icon: FileCheck,
     href: "/tools/license-tracker",
     color: "text-cyan-500",
     bgColor: "bg-cyan-500/10"
-  },
-  {
-    name: "Multi-Language Translator",
-    description: "Convert PLR content into 27 different languages. Context-aware translations with formatting preservation for global audiences.",
-    icon: Languages,
-    href: "/tools/multi-language-translator",
-    color: "text-green-500",
-    bgColor: "bg-green-500/10"
-  },
-  {
-    name: "Brand Kit Tool",
-    description: "Create a consistent brand identity across all your PLR content. Store logos, colors, fonts and apply them with one click.",
-    icon: Palette,
-    href: "/tools/brand-kit",
-    color: "text-pink-500",
-    bgColor: "bg-pink-500/10"
   }
 ];
 
@@ -67,10 +49,10 @@ const ToolsPage = () => {
   return (
     <>
       <Helmet>
-        <title>PLR Tools - 6 Powerful Tools for PLR Content Management</title>
+        <title>PLR Tools - 4 Powerful Tools for PLR Content Management</title>
         <meta 
           name="description" 
-          content="Discover our suite of 6 specialized PLR tools: Content Spinner, SEO Analyzer, HTML Editor, License Tracker, Multi-Language Translator, and Brand Kit Tool." 
+          content="Discover our suite of 4 specialized PLR tools: Scanner, Content Transformer, HTML Editor, and License Tracker." 
         />
         <link rel="canonical" href="https://plr-nook.lovable.app/tools" />
       </Helmet>
@@ -83,7 +65,7 @@ const ToolsPage = () => {
               PLR Organizer Pro Tools
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Six specialized tools designed to help you spin, optimize, edit, translate, brand, and organize PLR content.
+              Four specialized tools designed to help you scan, transform, edit, and organize PLR content.
             </p>
           </div>
         </section>
@@ -127,7 +109,7 @@ const ToolsPage = () => {
               Ready to Transform Your PLR Business?
             </h2>
             <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
-              Get access to all 6 tools and start turning PLR content into profitable digital products today.
+              Get access to all 4 tools and start turning PLR content into profitable digital products today.
             </p>
             <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
               <Link to="/funnel/offer">Get Started Now</Link>

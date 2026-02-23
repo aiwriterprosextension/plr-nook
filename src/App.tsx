@@ -15,12 +15,10 @@ import NotFound from "@/pages/NotFound";
 import InstallPage from "@/pages/InstallPage";
 
 // Tool Pages
-import ContentSpinnerPage from "@/pages/tools/ContentSpinnerPage";
-import SEOAnalyzerPage from "@/pages/tools/SEOAnalyzerPage";
+import PLRScannerPage from "@/pages/tools/PLRScannerPage";
+import ContentTransformerPage from "@/pages/tools/ContentTransformerPage";
 import HTMLEditorPage from "@/pages/tools/HTMLEditorPage";
 import LicenseTrackerPage from "@/pages/tools/LicenseTrackerPage";
-import MultiLanguageTranslatorPage from "@/pages/tools/MultiLanguageTranslatorPage";
-import BrandKitToolPage from "@/pages/tools/BrandKitToolPage";
 import ToolsPage from "@/pages/ToolsPage";
 
 // Legal Pages
@@ -54,17 +52,14 @@ const App = () => (
               <Route path="/tools" element={<ToolsPage />} />
               
               {/* Tool Pages */}
-              <Route path="/tools/content-spinner" element={<ContentSpinnerPage />} />
-              <Route path="/tools/seo-analyzer" element={<SEOAnalyzerPage />} />
+              <Route path="/tools/plr-scanner" element={<PLRScannerPage />} />
+              <Route path="/tools/content-transformer" element={<ContentTransformerPage />} />
               <Route path="/tools/html-editor" element={<HTMLEditorPage />} />
               <Route path="/tools/license-tracker" element={<LicenseTrackerPage />} />
-              <Route path="/tools/multi-language-translator" element={<MultiLanguageTranslatorPage />} />
-              <Route path="/tools/brand-kit" element={<BrandKitToolPage />} />
               
-              {/* SEO Redirects - Old tool URLs */}
-              <Route path="/tools/content-transformer" element={<Navigate to="/tools/content-spinner" replace />} />
-              <Route path="/tools/uniqueness-meter" element={<Navigate to="/tools/content-spinner" replace />} />
-              <Route path="/tools/plr-scanner" element={<Navigate to="/tools" replace />} />
+              {/* SEO Redirects - Old tool URLs to new Content Transformer */}
+              <Route path="/tools/content-spinner" element={<Navigate to="/tools/content-transformer" replace />} />
+              <Route path="/tools/uniqueness-meter" element={<Navigate to="/tools/content-transformer" replace />} />
 
               {/* Legal Pages */}
               <Route path="/privacy" element={<PrivacyPolicy />} />

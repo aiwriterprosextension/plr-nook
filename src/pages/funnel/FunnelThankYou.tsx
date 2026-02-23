@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { CheckCircle, Mail } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -50,13 +49,9 @@ export default function FunnelThankYou() {
             </p>
           </div>
 
-          <p className="text-sm text-muted-foreground mb-8">
+          <p className="text-sm text-muted-foreground">
             Didn't receive the email? Check your spam folder or contact support@plrorganizerpro.com
           </p>
-
-          <Link to="/" className="text-primary hover:underline font-medium">
-            ← Back to PLR Organizer Pro
-          </Link>
         </div>
       </div>
 

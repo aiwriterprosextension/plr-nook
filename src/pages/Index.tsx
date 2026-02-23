@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
 import { 
-  Scan, FolderOpen, FileKey, Eye, Wand2, Code, Search, Languages, Palette,
+  Scan, FolderOpen, FileKey, Eye, Wand2, Code,
   Clock, DollarSign, AlertTriangle, Archive, Check, ArrowRight,
-  Users, ShoppingCart, Megaphone, GraduationCap, Play, Star
+  Users, ShoppingCart, Megaphone, GraduationCap, Play, Star, Video
 } from "lucide-react";
-import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -37,12 +36,10 @@ const features = [
 ];
 
 const tools = [
-  { icon: Wand2, name: "Content Spinner", desc: "Transform generic PLR into 100% unique content with AI." },
-  { icon: Search, name: "SEO Analyzer", desc: "Optimize your PLR content for search engine rankings." },
-  { icon: Code, name: "HTML Editor", desc: "Create & format website content without coding skills." },
-  { icon: FileKey, name: "License Tracker", desc: "Track usage rights and expiration dates for all licenses." },
-  { icon: Languages, name: "Multi-Language Translator", desc: "Convert PLR content into 27 different languages." },
-  { icon: Palette, name: "Brand Kit Tool", desc: "Apply consistent branding across all PLR content." },
+  { icon: Scan, name: "PLR Scanner", desc: "Deep scan technology finds every PLR file on your system." },
+  { icon: Wand2, name: "Content Transformer", desc: "Check uniqueness and transform PLR into original content." },
+  { icon: Code, name: "HTML Editor", desc: "Edit sales pages and squeeze pages directly in the app." },
+  { icon: FileKey, name: "License Tracker", desc: "Database of your rights for each PLR package." },
 ];
 
 const targetAudience = [
@@ -94,21 +91,6 @@ const howItWorks = [
 export default function Index() {
   return (
     <div className="flex flex-col">
-      <SEOHead
-        title="Organize Your PLR Library in Minutes"
-        description="The only desktop app that scans your entire computer, automatically organizes PLR by niche, tracks licenses, and eliminates duplicate purchases forever."
-        keywords="PLR organizer, PLR content management, organize PLR files, PLR scanner, digital content organization"
-        canonicalUrl="https://plr-nook.lovable.app/"
-        jsonLd={{
-          "@context": "https://schema.org",
-          "@type": "SoftwareApplication",
-          "name": "PLR Organizer Pro",
-          "applicationCategory": "BusinessApplication",
-          "operatingSystem": "Windows, macOS, Linux",
-          "offers": { "@type": "Offer", "price": "27.00", "priceCurrency": "USD" },
-          "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "1250" }
-        }}
-      />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-hero py-20 lg:py-32">
         <div className="container relative z-10">
@@ -134,12 +116,10 @@ export default function Index() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-in">
               <PlatformCTA />
-              <Link to="/funnel/offer">
-                <Button variant="outlineGhost" size="xl">
-                  <Play className="h-5 w-5" />
-                  See How It Works
-                </Button>
-              </Link>
+              <Button variant="outlineGhost" size="xl">
+                <Play className="h-5 w-5" />
+                Watch Demo Video
+              </Button>
             </div>
 
             {/* Trust Badges */}
@@ -349,7 +329,10 @@ export default function Index() {
               Get Organized in 3 Simple Steps
             </h2>
             <p className="text-muted-foreground">
-              <span className="text-muted-foreground">Up and running in under 2 minutes</span>
+              <a href="#" className="text-primary hover:underline inline-flex items-center gap-1">
+                <Video className="h-4 w-4" />
+                See Full Installation Video
+              </a>
             </p>
           </div>
           
