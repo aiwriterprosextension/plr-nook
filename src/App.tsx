@@ -12,6 +12,7 @@ import { MainLayout } from "@/components/layout/MainLayout";
 import Index from "@/pages/Index";
 import About from "@/pages/About";
 import NotFound from "@/pages/NotFound";
+import PLROrganizer from "@/pages/PLROrganizer";
 import InstallPage from "@/pages/InstallPage";
 
 // Tool Pages
@@ -48,6 +49,7 @@ const App = () => (
             {/* Main Website with Header/Footer */}
             <Route element={<MainLayout />}>
               <Route path="/" element={<Index />} />
+              <Route path="/plr-organizer" element={<PLROrganizer />} />
               <Route path="/about" element={<About />} />
               <Route path="/tools" element={<ToolsPage />} />
               
