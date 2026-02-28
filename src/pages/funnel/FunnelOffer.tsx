@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { SEOHead } from "@/components/SEOHead";
 import { Link, useNavigate } from "react-router-dom";
 import { Check, Shield, Clock, ArrowRight, Play, Star, AlertTriangle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -56,6 +57,14 @@ export default function FunnelOffer() {
   const totalValue = valueStack.reduce((sum, item) => sum + parseInt(item.value.replace("$", "")), 0);
 
   return (
+    <>
+    <SEOHead
+      title="Get PLR Organizer Pro — Launch Special"
+      description="Organize your entire PLR library in minutes with PLR Organizer Pro. Launch special: 70% off. One-time payment, 7-day money-back guarantee."
+      canonicalUrl="https://organizer.aiwriterpros.com/funnel/offer"
+      robots="index, follow"
+      author="PLR Organizer Pro"
+    />
     <div className="min-h-screen bg-background">
       {/* Urgency Bar */}
       <div className="sticky top-0 z-50 bg-gradient-primary text-primary-foreground py-3 animate-countdown">
@@ -267,5 +276,6 @@ export default function FunnelOffer() {
         </div>
       </footer>
     </div>
+    </>
   );
 }

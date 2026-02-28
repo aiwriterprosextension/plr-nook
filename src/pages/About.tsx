@@ -52,7 +52,7 @@ export default function About() {
         title="About PLR Organizer Pro | Built by PLR Users, For PLR Users"
         description="PLR Organizer Pro was built by John Lawrence after years of personal frustration managing thousands of PLR files. Learn the story behind the app, our founding principles, and the mission driving everything we build."
         keywords="PLR Organizer Pro, about us, PLR tools, digital content organization, John Lawrence"
-        canonicalUrl="https://plrorganizerpro.com/about"
+        canonicalUrl="https://organizer.aiwriterpros.com/about"
         jsonLd={combinedJsonLd}
         robots="index, follow"
         author="John Lawrence"

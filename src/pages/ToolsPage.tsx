@@ -74,6 +74,8 @@ const ToolsPage = () => {
         keywords="PLR tools, PLR content management, PLR organizer tools, PLR license decoder, PLR duplicate detector"
         canonicalUrl="https://organizer.aiwriterpros.com/tools"
         jsonLd={jsonLd}
+        robots="index, follow"
+        author="PLR Organizer Pro"
       />
 
       <div className="min-h-screen bg-background">

@@ -7,6 +7,9 @@ export default function RefundPolicy() {
         title="Refund Policy | PLR Organizer Pro"
         description="Learn about our refund policy and money-back guarantee for PLR Organizer Pro software purchases."
         keywords="refund policy, money back guarantee, PLR Organizer Pro, returns"
+        canonicalUrl="https://organizer.aiwriterpros.com/refund"
+        robots="index, follow"
+        author="PLR Organizer Pro"
       />
 
       <div className="py-16 bg-background">

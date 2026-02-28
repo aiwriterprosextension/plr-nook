@@ -7,6 +7,9 @@ export default function PrivacyPolicy() {
         title="Privacy Policy | PLR Organizer Pro"
         description="Read our privacy policy to understand how PLR Organizer Pro collects, uses, and protects your personal information."
         keywords="privacy policy, data protection, PLR Organizer Pro, personal information"
+        canonicalUrl="https://organizer.aiwriterpros.com/privacy"
+        robots="index, follow"
+        author="PLR Organizer Pro"
       />
 
       <div className="py-16 bg-background">

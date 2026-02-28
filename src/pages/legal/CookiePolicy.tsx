@@ -7,6 +7,9 @@ export default function CookiePolicy() {
         title="Cookie Policy | PLR Organizer Pro"
         description="Learn about how PLR Organizer Pro uses cookies and similar technologies on our website."
         keywords="cookie policy, cookies, tracking, PLR Organizer Pro, website cookies"
+        canonicalUrl="https://organizer.aiwriterpros.com/cookies"
+        robots="index, follow"
+        author="PLR Organizer Pro"
       />
 
       <div className="py-16 bg-background">

@@ -95,7 +95,7 @@ const orgJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "PLR Organizer Pro",
-  url: "https://plrorganizerpro.com",
+  url: "https://organizer.aiwriterpros.com",
   description: "The ultimate desktop app for organizing, managing, and maximizing your PLR content library.",
 };
 
@@ -128,7 +128,7 @@ export default function Index() {
         title="PLR Organizer Pro | Auto-Scan, Organise & Manage Your Entire PLR Library — Desktop App for Windows, Mac & Linux"
         description="PLR Organizer Pro automatically scans your computer, identifies every PLR package by niche using AI, and organises your entire library into a clean folder structure in minutes. Stop losing money to buried, forgotten PLR content. Works 100% offline. One-time payment."
         keywords="PLR organizer, PLR file manager, PLR content organizer, PLR library manager, PLR niche sorter"
-        canonicalUrl="https://plrorganizerpro.com/"
+        canonicalUrl="https://organizer.aiwriterpros.com/"
         jsonLd={combinedJsonLd}
         robots="index, follow"
         author="PLR Organizer Pro"
