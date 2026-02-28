@@ -156,6 +156,7 @@ export default function PLROrganizer() {
         description="Stop drowning in unsorted PLR folders. PLR Organizer automatically scans your hard drive, detects every PLR package, identifies its niche using AI, and physically organises your entire library into a clean Niche → Sub-Niche folder structure — in minutes, not days. Works 100% offline. No subscription."
         keywords="PLR organizer, PLR library manager, PLR file organizer, PLR niche sorter, PLR content management"
         canonicalUrl="https://organizer.aiwriterpros.com/plr-organizer"
+        ogImage="https://organizer.aiwriterpros.com/og-plr-organizer.png"
         jsonLd={combinedJsonLd}
         robots="index, follow"
         author="PLR Organizer Pro"

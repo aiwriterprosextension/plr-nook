@@ -129,6 +129,7 @@ export default function Index() {
         description="PLR Organizer Pro automatically scans your computer, identifies every PLR package by niche using AI, and organises your entire library into a clean folder structure in minutes. Stop losing money to buried, forgotten PLR content. Works 100% offline. One-time payment."
         keywords="PLR organizer, PLR file manager, PLR content organizer, PLR library manager, PLR niche sorter"
         canonicalUrl="https://organizer.aiwriterpros.com/"
+        ogImage="https://organizer.aiwriterpros.com/og-homepage.png"
         jsonLd={combinedJsonLd}
         robots="index, follow"
         author="PLR Organizer Pro"

@@ -165,6 +165,7 @@ export default function DownloadPage() {
         description="Download PLR Organizer Pro for Windows, macOS, or Linux. Native desktop app with direct file system access, offline capability, and automatic updates. Free for all PLR Organizer Pro users."
         keywords="download PLR Organizer Pro, PLR software download, PLR organizer Windows, PLR organizer Mac, PLR organizer Linux, desktop PLR tool"
         canonicalUrl="https://organizer.aiwriterpros.com/download"
+        ogImage="https://organizer.aiwriterpros.com/og-download.png"
         robots="index, follow"
         author="PLR Organizer Pro"
         ogType="website"
