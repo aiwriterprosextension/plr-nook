@@ -1,97 +1,124 @@
-import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { 
-  Search, 
-  Wand2, 
-  Code, 
-  FileCheck, 
-  ArrowRight
-} from "lucide-react";
+import { FileKey, Code, Copy, Wand2, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { SEOHead } from "@/components/SEOHead";
 
 const tools = [
   {
-    name: "PLR Scanner",
-    description: "Instantly analyze any PLR package for quality, licensing terms, and commercial viability. Get detailed reports on content value and resale potential.",
-    icon: Search,
-    href: "/tools/plr-scanner",
-    color: "text-blue-500",
-    bgColor: "bg-blue-500/10"
+    name: "License Rights Decoder",
+    description: "Automatically reads and interprets license files inside PLR packages. Displays a clear Can / Can't / Maybe checklist so you know exactly what you're allowed to do.",
+    icon: FileKey,
+    href: "/tools/license-decoder",
+    features: [
+      "Auto-parses license files from ZIP, RAR, and 7Z archives",
+      "Color-coded Can / Can't / Maybe rights checklist",
+      "Filter entire library by specific usage rights",
+    ],
   },
   {
-    name: "Content Transformer",
-    description: "Check PLR content for uniqueness and transform it into 100% original content. AI-powered rewriting with real-time plagiarism detection.",
-    icon: Wand2,
-    href: "/tools/content-transformer",
-    color: "text-purple-500",
-    bgColor: "bg-purple-500/10"
-  },
-  {
-    name: "HTML Editor",
-    description: "Professional HTML editing for PLR sales pages and content. Visual editor with live preview and clean code output.",
+    name: "Visual HTML Sales Page Editor",
+    description: "Open, customize, and export the HTML sales pages bundled inside PLR packages — without writing a single line of code.",
     icon: Code,
     href: "/tools/html-editor",
-    color: "text-orange-500",
-    bgColor: "bg-orange-500/10"
+    features: [
+      "Dual-pane editor with live visual preview",
+      "Token replacement wizard for instant rebranding",
+      "Export standalone HTML or copy to clipboard",
+    ],
   },
   {
-    name: "License Tracker",
-    description: "Never lose track of your PLR licenses again. Organize, search, and manage all your license terms in one secure location.",
-    icon: FileCheck,
-    href: "/tools/license-tracker",
-    color: "text-cyan-500",
-    bgColor: "bg-cyan-500/10"
-  }
+    name: "Duplicate & Overlap Detector",
+    description: "Finds exact duplicates, near-duplicates, and content overlap across your entire PLR library — even when filenames and sellers are different.",
+    icon: Copy,
+    href: "/tools/duplicate-detector",
+    features: [
+      "SHA-256 hashing for exact duplicate detection",
+      "Near-duplicate scoring with adjustable threshold",
+      "Safe delete with undo and space savings report",
+    ],
+  },
+  {
+    name: "AI Content Spinner",
+    description: "Transforms generic PLR content into unique, SEO-friendly articles that rank in search engines and pass AI detectors.",
+    icon: Wand2,
+    href: "/tools/content-spinner",
+    features: [
+      "Uniqueness heatmap highlights what needs rewriting",
+      "Manual and AI-assisted rewriting modes",
+      "Before/after diff view with per-change revert",
+    ],
+  },
 ];
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "PLR Organizer Pro",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Windows, macOS, Linux",
+  "description": "4 powerful built-in tools for managing, customizing, and transforming PLR content.",
+  "offers": {
+    "@type": "Offer",
+    "price": "27.00",
+    "priceCurrency": "USD",
+  },
+};
 
 const ToolsPage = () => {
   return (
     <>
-      <Helmet>
-        <title>PLR Tools - 4 Powerful Tools for PLR Content Management</title>
-        <meta 
-          name="description" 
-          content="Discover our suite of 4 specialized PLR tools: Scanner, Content Transformer, HTML Editor, and License Tracker." 
-        />
-        <link rel="canonical" href="https://plr-nook.lovable.app/tools" />
-      </Helmet>
+      <SEOHead
+        title="PLR Tools - 4 Powerful Built-In Tools"
+        description="Discover our suite of 4 specialized PLR tools: License Rights Decoder, Visual HTML Editor, Duplicate Detector, and AI Content Spinner."
+        keywords="PLR tools, PLR content management, PLR organizer tools, PLR license decoder, PLR duplicate detector"
+        canonicalUrl="https://plr-nook.lovable.app/tools"
+        jsonLd={jsonLd}
+      />
 
       <div className="min-h-screen bg-background">
         {/* Hero Section */}
         <section className="py-16 md:py-24 bg-gradient-to-b from-muted/50 to-background">
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              PLR Organizer Pro Tools
+              4 Built-In Power Tools
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Four specialized tools designed to help you scan, transform, edit, and organize PLR content.
+              Decode licenses, edit sales pages, eliminate duplicates, and spin content into unique articles — all from one app.
             </p>
           </div>
         </section>
 
         {/* Tools Grid */}
-        <section className="py-16">
+        <section className="py-16" aria-labelledby="tools-grid">
           <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {tools.map((tool) => (
-                <Card 
-                  key={tool.name} 
+                <Card
+                  key={tool.name}
                   className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50"
                 >
                   <CardHeader>
-                    <div className={`w-12 h-12 rounded-lg ${tool.bgColor} flex items-center justify-center mb-4`}>
-                      <tool.icon className={`w-6 h-6 ${tool.color}`} />
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                      <tool.icon className="w-6 h-6 text-primary" />
                     </div>
                     <CardTitle className="text-xl">{tool.name}</CardTitle>
                     <CardDescription className="text-muted-foreground">
                       {tool.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="space-y-4">
+                    <ul className="space-y-2">
+                      {tool.features.map((feature, i) => (
+                        <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                          <span className="text-primary mt-0.5">•</span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
                     <Button asChild variant="ghost" className="group-hover:text-primary p-0">
                       <Link to={tool.href} className="flex items-center gap-2">
-                        Explore Tool
+                        Learn More
                         <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                       </Link>
                     </Button>

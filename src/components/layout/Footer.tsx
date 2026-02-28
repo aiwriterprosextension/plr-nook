@@ -5,19 +5,13 @@ import logo from "@/assets/logo.png";
 const footerLinks = {
   company: [
     { name: "About Us", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "Tools", href: "/tools" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy" },
     { name: "Terms of Service", href: "/terms" },
     { name: "Cookie Policy", href: "/cookies" },
     { name: "Refund Policy", href: "/refund" },
-  ],
-  resources: [
-    { name: "Documentation", href: "/docs" },
-    { name: "Video Tutorials", href: "/resources/tutorials" },
-    { name: "Knowledge Base", href: "/resources/knowledge-base" },
-    { name: "Blog", href: "/blog" },
   ],
 };
 
@@ -83,19 +77,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Resources Links */}
-          <div>
-            <h4 className="font-semibold mb-4">Resources</h4>
-            <ul className="space-y-3">
-              {footerLinks.resources.map((link) => (
-                <li key={link.name}>
-                  <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
       </div>
 

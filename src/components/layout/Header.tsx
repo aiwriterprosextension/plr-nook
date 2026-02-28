@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown, Scan, Wand2, Code, FileKey, BookOpen, Video, HelpCircle, Users, Sun, Moon } from "lucide-react";
+import { Menu, X, ChevronDown, Wand2, Code, FileKey, Copy, Sun, Moon } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { Button } from "@/components/ui/button";
 import {
@@ -13,17 +13,10 @@ import {
 } from "@/components/ui/navigation-menu";
 
 const tools = [
-  { name: "PLR Scanner", desc: "Scan and organize your library", icon: Scan, href: "/tools/plr-scanner" },
-  { name: "Content Transformer", desc: "Check & make PLR unique", icon: Wand2, href: "/tools/content-transformer" },
-  { name: "HTML Editor", desc: "Edit sales pages", icon: Code, href: "/tools/html-editor" },
-  { name: "License Tracker", desc: "Track usage rights", icon: FileKey, href: "/tools/license-tracker" },
-];
-
-const resources = [
-  { name: "PLR Organization Guides", icon: BookOpen, href: "/resources/guides" },
-  { name: "Video Tutorials", icon: Video, href: "/resources/tutorials" },
-  { name: "Knowledge Base", icon: HelpCircle, href: "/resources/knowledge-base" },
-  { name: "Community Forum", icon: Users, href: "/resources/community", badge: "Coming Soon" },
+  { name: "License Rights Decoder", desc: "Know your PLR rights instantly", icon: FileKey, href: "/tools/license-decoder" },
+  { name: "HTML Sales Page Editor", desc: "Edit sales pages visually", icon: Code, href: "/tools/html-editor" },
+  { name: "Duplicate Detector", desc: "Find and remove duplicates", icon: Copy, href: "/tools/duplicate-detector" },
+  { name: "AI Content Spinner", desc: "Make PLR content unique", icon: Wand2, href: "/tools/content-spinner" },
 ];
 
 export function Header() {
@@ -50,34 +43,6 @@ export function Header() {
               <Link to="/" className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
                 Home
               </Link>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="bg-transparent">Resources</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[300px] gap-2 p-4">
-                  {resources.map((item) => (
-                    <li key={item.name}>
-                      <NavigationMenuLink asChild>
-                        <Link
-                          to={item.href}
-                          className="flex items-center gap-3 rounded-lg p-3 hover:bg-muted transition-colors"
-                        >
-                          <item.icon className="h-5 w-5 text-primary" />
-                          <div className="flex items-center gap-2">
-                            <span className="font-medium">{item.name}</span>
-                            {item.badge && (
-                              <span className="rounded-full bg-accent px-2 py-0.5 text-xs font-medium text-accent-foreground">
-                                {item.badge}
-                              </span>
-                            )}
-                          </div>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
             </NavigationMenuItem>
 
             <NavigationMenuItem>
@@ -115,14 +80,8 @@ export function Header() {
             </NavigationMenuItem>
 
             <NavigationMenuItem>
-              <Link to="/pricing" className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
-                Pricing
-              </Link>
-            </NavigationMenuItem>
-
-            <NavigationMenuItem>
-              <Link to="/support" className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
-                Support
+              <Link to="/about" className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
+                About
               </Link>
             </NavigationMenuItem>
           </NavigationMenuList>
@@ -159,20 +118,6 @@ export function Header() {
               Home
             </Link>
             <div className="space-y-2">
-              <span className="text-sm font-semibold text-muted-foreground">Resources</span>
-              {resources.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className="flex items-center gap-2 py-2 pl-4"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  <item.icon className="h-4 w-4 text-primary" />
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-            <div className="space-y-2">
               <span className="text-sm font-semibold text-muted-foreground">Tools</span>
               {tools.map((tool) => (
                 <Link
@@ -193,11 +138,8 @@ export function Header() {
                 View All Tools →
               </Link>
             </div>
-            <Link to="/pricing" className="block py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>
-              Pricing
-            </Link>
-            <Link to="/support" className="block py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>
-              Support
+            <Link to="/about" className="block py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>
+              About
             </Link>
             <div className="flex gap-2 pt-4 border-t border-border">
               <Link to="/funnel/offer" className="flex-1">
