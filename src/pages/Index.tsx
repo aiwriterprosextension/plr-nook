@@ -106,7 +106,7 @@ const softwareJsonLd = {
   applicationCategory: "UtilitiesApplication",
   operatingSystem: "Windows, macOS, Linux",
   offers: { "@type": "Offer", price: "27", priceCurrency: "USD" },
-  aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "10000" },
+  aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", reviewCount: "127" },
 };
 
 const faqJsonLd = {
@@ -512,16 +512,16 @@ export default function Index() {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {testimonials.map((t, i) => (
-                <Card key={i} className="bg-card" itemScope itemType="https://schema.org/Review">
+                <Card key={i} className="bg-card">
                   <CardContent className="pt-6">
                     <div className="flex gap-1 mb-4">
                       {[...Array(t.rating)].map((_, j) => (
                         <Star key={j} className="h-4 w-4 text-warning fill-warning" />
                       ))}
                     </div>
-                    <p className="text-muted-foreground mb-4" itemProp="reviewBody">"{t.text}"</p>
+                    <p className="text-muted-foreground mb-4">"{t.text}"</p>
                     <div>
-                      <p className="font-semibold text-secondary" itemProp="author">{t.name}</p>
+                      <p className="font-semibold text-secondary">{t.name}</p>
                       <p className="text-sm text-muted-foreground">{t.role}</p>
                     </div>
                   </CardContent>
