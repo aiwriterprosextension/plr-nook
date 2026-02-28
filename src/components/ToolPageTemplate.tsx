@@ -111,7 +111,7 @@ export function ToolPageTemplate({
         title={seoTitle}
         description={seoDescription}
         keywords={seoKeywords}
-        canonicalUrl={`https://plr-nook.lovable.app${canonicalPath}`}
+        canonicalUrl={`https://organizer.aiwriterpros.com${canonicalPath}`}
         jsonLd={jsonLd}
       />
       
