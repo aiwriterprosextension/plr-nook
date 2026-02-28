@@ -21,7 +21,6 @@ const tools = [
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "PLR Organizer", href: "/plr-organizer" },
   { name: "Download", href: "#" },
   { name: "Resources", href: "#" },
   { name: "About", href: "/about" },
@@ -51,13 +50,6 @@ export function Header() {
             <NavigationMenuItem>
               <Link to="/" className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
                 Home
-              </Link>
-            </NavigationMenuItem>
-
-            {/* PLR Organizer */}
-            <NavigationMenuItem>
-              <Link to="/plr-organizer" className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
-                PLR Organizer
               </Link>
             </NavigationMenuItem>
 
@@ -148,9 +140,6 @@ export function Header() {
           <div className="container py-4 space-y-4">
             <Link to="/" className="block py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>
               Home
-            </Link>
-            <Link to="/plr-organizer" className="block py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>
-              PLR Organizer
             </Link>
             <Link to="#" className="block py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>
               Download
