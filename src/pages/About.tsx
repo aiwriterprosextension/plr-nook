@@ -226,7 +226,9 @@ export default function About() {
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your PLR Library?</h2>
               <p className="text-lg opacity-90 mb-8">
-                Join thousands of users who've taken control of their digital assets.
+                Join thousands of users who've taken control of their digital assets.{" "}
+                <Link to="/tools" className="underline font-semibold">Explore the built-in tools</Link> or{" "}
+                <Link to="/download" className="underline font-semibold">download the desktop app</Link>.
               </p>
               <Link to="/plr-organizer">
                 <Button size="lg" className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-lg px-10 py-6 gap-2">

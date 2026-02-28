@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { SEOHead } from "@/components/SEOHead";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const features = [
   { title: "Archive File Browser", description: "Opens HTML files directly from ZIP, RAR, or 7Z packages. Left-side file tree shows all HTML files — pick sales page, opt-in page, or thank-you page to edit." },
@@ -351,11 +352,18 @@ export default function HTMLEditorPage() {
           </div>
         </section>
 
+        {/* ── RELATED TOOLS ── */}
+        <RelatedTools currentTool="Visual HTML Sales Page Editor" />
+
         {/* ── CTA BANNER ── */}
         <section className="py-16 bg-gradient-primary text-primary-foreground" aria-label="Call to Action">
           <div className="container max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Use Visual HTML Sales Page Editor?</h2>
-            <p className="text-lg opacity-90 mb-8">Get instant access to Visual HTML Sales Page Editor and all 3 other powerful tools included with PLR Organizer Pro.</p>
+            <p className="text-lg opacity-90 mb-8">
+              Get instant access to Visual HTML Sales Page Editor and all 3 other powerful tools included with{" "}
+              <Link to="/plr-organizer" className="underline font-semibold">PLR Organizer Pro</Link>.{" "}
+              <Link to="/download" className="underline font-semibold">Download now</Link>.
+            </p>
             <Link to="/funnel/offer">
               <Button variant="warning" size="xl" className="text-warning-foreground">
                 Get All 4 Tools for Just $27

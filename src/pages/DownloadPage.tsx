@@ -187,10 +187,14 @@ export default function DownloadPage() {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary mb-6">
               Download PLR Organizer Pro
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4">
               Get the full power of PLR organisation with native desktop features. Direct file
               system access, lightning-fast performance, and full offline capability — available
               for Windows, Mac, and Linux.
+            </p>
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto mb-8">
+              New to PLR Organizer Pro? <Link to="/plr-organizer" className="text-primary hover:underline font-medium">Learn what it can do</Link> or{" "}
+              <Link to="/tools" className="text-primary hover:underline font-medium">explore the included tools</Link>.
             </p>
             <div className="flex flex-wrap justify-center gap-4 md:gap-6 text-sm font-medium text-foreground">
               <span className="flex items-center gap-1.5">

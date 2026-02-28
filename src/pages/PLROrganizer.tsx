@@ -574,7 +574,7 @@ External Drive\\
             </div>
 
             <div className="text-center mt-8">
-              <Link to="#">
+              <Link to="/download">
                 <Button variant="cta" size="lg" className="gap-2">Download PLR Organizer <ArrowRight className="h-4 w-4" /></Button>
               </Link>
             </div>
@@ -676,7 +676,7 @@ External Drive\\
           <div className="container max-w-3xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-4">Ready to Take Control of Your PLR Library?</h2>
             <p className="text-lg opacity-90 mb-8">
-              Get instant access to PLR Organizer and all 4 specialist tools — AI Content Spinner, License Rights Decoder, Visual HTML Editor, and Duplicate Detector — for a single one-time payment.
+              Get instant access to PLR Organizer and all 4 specialist tools — AI Content Spinner, License Rights Decoder, Visual HTML Editor, and Duplicate Detector — for a single one-time payment. <Link to="/download" className="underline font-semibold">Download for Windows, Mac &amp; Linux</Link>. <Link to="/about" className="underline font-semibold">Learn more about us</Link>.
             </p>
             <Link to="/funnel/offer">
               <Button size="lg" className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-lg px-10 py-6 gap-2">

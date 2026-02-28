@@ -84,7 +84,11 @@ const ToolsPage = () => {
               4 Built-In Power Tools
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Decode licenses, edit sales pages, eliminate duplicates, and spin content into unique articles — all from one app.
+              Decode licenses, edit sales pages, eliminate duplicates, and spin content into unique articles — all from one app. Every tool is included with{" "}
+              <Link to="/plr-organizer" className="text-primary hover:underline font-medium">PLR Organizer Pro</Link>.
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground">
+              Ready to get started? <Link to="/download" className="text-primary hover:underline font-medium">Download the desktop app</Link> for Windows, Mac &amp; Linux.
             </p>
           </div>
         </section>
