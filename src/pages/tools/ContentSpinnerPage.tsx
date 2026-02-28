@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Wand2, Check, ArrowRight, Play, CircleAlert, FileText, Layers } from "lucide-react";
+import { Slider } from "@/components/ui/slider";
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -66,6 +69,113 @@ const faqJsonLd = {
     acceptedAnswer: { "@type": "Answer", text: f.answer },
   })),
 };
+
+const originalText = "In today's fast-paced digital world, making money online has never been easier. With the right tools and strategies, anyone can build a thriving online business from the comfort of their own home. This comprehensive guide will show you everything you need to know to get started on your journey to financial freedom.";
+
+const spunVersions = [
+  {
+    label: "Light",
+    score: 55,
+    text: (
+      <>
+        In today's <mark className="bg-success/20 text-foreground underline decoration-success/50">rapidly evolving</mark> digital world, <mark className="bg-success/20 text-foreground underline decoration-success/50">earning an income</mark> online has never been easier. With the <mark className="bg-success/20 text-foreground underline decoration-success/50">proper</mark> tools and strategies, anyone can build a <mark className="bg-success/20 text-foreground underline decoration-success/50">successful</mark> online business from the comfort of their own home. This <mark className="bg-success/20 text-foreground underline decoration-success/50">in-depth</mark> guide will show you everything you need to know to get started on your <mark className="bg-success/20 text-foreground underline decoration-success/50">path</mark> to financial freedom.
+      </>
+    ),
+  },
+  {
+    label: "Medium",
+    score: 75,
+    text: (
+      <>
+        <mark className="bg-success/20 text-foreground underline decoration-success/50">The internet has opened up unprecedented opportunities for generating revenue from anywhere.</mark> <mark className="bg-success/20 text-foreground underline decoration-success/50">Armed with proven methods and the right software, building a profitable web-based business from home is within anyone's reach.</mark> <mark className="bg-success/20 text-foreground underline decoration-success/50">This resource walks you through each step required to launch your online income journey.</mark>
+      </>
+    ),
+  },
+  {
+    label: "Aggressive",
+    score: 92,
+    text: (
+      <>
+        <mark className="bg-success/20 text-foreground underline decoration-success/50">What if you could replace your 9-to-5 salary with revenue generated entirely from your laptop? Thousands of entrepreneurs have already made this shift — and the barrier to entry is lower than ever. Inside this step-by-step blueprint, you'll discover the exact frameworks, platforms, and tactics that turn a simple internet connection into a reliable income stream.</mark>
+      </>
+    ),
+  },
+];
+
+const levelLabels = ["Light", "Medium", "Aggressive"];
+
+function UniquenessSliderDemo() {
+  const [level, setLevel] = useState(1);
+  const current = spunVersions[level];
+
+  return (
+    <section className="py-16 bg-muted" aria-label="Interactive Uniqueness Demo">
+      <div className="container max-w-5xl mx-auto">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">Try It: See How Uniqueness Levels Transform PLR</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Drag the slider to see the same PLR paragraph at different spinning levels.</p>
+        </div>
+
+        {/* Slider */}
+        <div className="max-w-md mx-auto mb-10">
+          <div className="flex justify-between text-sm font-medium text-muted-foreground mb-3">
+            {levelLabels.map((l, i) => (
+              <span key={l} className={i === level ? "text-primary font-bold" : ""}>{l}</span>
+            ))}
+          </div>
+          <Slider
+            value={[level]}
+            onValueChange={(v) => setLevel(v[0])}
+            min={0}
+            max={2}
+            step={1}
+            aria-label="Uniqueness level"
+            className="cursor-pointer"
+          />
+        </div>
+
+        {/* Side-by-side panels */}
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <Card className="border-destructive/20 bg-destructive/5">
+            <CardContent className="pt-6">
+              <div className="flex items-center gap-2 mb-3">
+                <Badge variant="destructive" className="text-xs">Original PLR</Badge>
+              </div>
+              <p className="text-sm leading-relaxed text-foreground/80">{originalText}</p>
+            </CardContent>
+          </Card>
+
+          <Card className="border-success/30 bg-success/5">
+            <CardContent className="pt-6">
+              <div className="flex items-center gap-2 mb-3">
+                <Badge className="bg-success text-success-foreground text-xs">{current.label} Spin</Badge>
+              </div>
+              <div aria-live="polite" className="transition-opacity duration-300">
+                <p className="text-sm leading-relaxed text-foreground/80">{current.text}</p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Uniqueness score bar */}
+        <div className="max-w-md mx-auto mb-8">
+          <div className="flex justify-between items-center mb-2">
+            <span className="text-sm font-medium text-muted-foreground">Uniqueness Score</span>
+            <Badge variant="outline" className="text-primary font-bold">{current.score}%</Badge>
+          </div>
+          <Progress value={current.score} className="h-3" />
+        </div>
+
+        {/* CTA */}
+        <div className="text-center">
+          <Link to="/funnel/offer">
+            <Button variant="cta" size="lg">Get AI Content Spinner Now <ArrowRight className="ml-2 h-4 w-4" /></Button>
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export default function ContentSpinnerPage() {
   return (
@@ -252,31 +362,8 @@ export default function ContentSpinnerPage() {
           </div>
         </section>
 
-        {/* ── USE CASE EXAMPLES ── */}
-        <section className="py-16 bg-muted" aria-label="PLR Use Case Examples">
-          <div className="container">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">PLR-Specific Examples</h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">See exactly how content marketers and affiliate site owners use AI Content Spinner</p>
-            </div>
-            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <Card className="border-border/50">
-                <CardContent className="pt-6">
-                  <div className="flex items-center gap-2 mb-3"><FileText className="h-5 w-5 text-primary" /><h3 className="font-semibold text-secondary">How to spin a PLR ebook chapter for affiliate marketing</h3></div>
-                  <p className="text-sm text-muted-foreground mb-4">Transform generic PLR ebook content into compelling affiliate marketing material that converts better. Use Content Spinner to maintain key product details while creating a unique review style.</p>
-                  <Link to="/funnel/offer" className="text-primary text-sm font-medium hover:underline flex items-center gap-1">Try This Example <ArrowRight className="h-3 w-3" /></Link>
-                </CardContent>
-              </Card>
-              <Card className="border-border/50">
-                <CardContent className="pt-6">
-                  <div className="flex items-center gap-2 mb-3"><Layers className="h-5 w-5 text-primary" /><h3 className="font-semibold text-secondary">Creating 5 unique blog posts from a single PLR article</h3></div>
-                  <p className="text-sm text-muted-foreground mb-4">Maximise your content marketing by transforming one PLR article into multiple unique blog posts. Create variations with different angles and focuses from the same source material.</p>
-                  <Link to="/funnel/offer" className="text-primary text-sm font-medium hover:underline flex items-center gap-1">Try This Example <ArrowRight className="h-3 w-3" /></Link>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
+        {/* ── INTERACTIVE UNIQUENESS SLIDER DEMO ── */}
+        <UniquenessSliderDemo />
 
         {/* ── TECH SPECS ── */}
         <section className="py-16 bg-background" aria-label="Technical Specifications">
