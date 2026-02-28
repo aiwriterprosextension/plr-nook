@@ -1,11 +1,20 @@
 import { Link } from "react-router-dom";
-import { Mail, Twitter, Facebook, Youtube, Lock } from "lucide-react";
+import { Mail, Twitter, Facebook, Youtube, Lock, Monitor } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const footerLinks = {
   company: [
+    { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Tools", href: "/tools" },
+    { name: "PLR Organizer", href: "/plr-organizer" },
+    { name: "Download", href: "#" },
+  ],
+  tools: [
+    { name: "PLR Organizer", href: "/plr-organizer" },
+    { name: "Content Spinner", href: "/tools/content-spinner" },
+    { name: "License Decoder", href: "/tools/license-decoder" },
+    { name: "HTML Editor", href: "/tools/html-editor" },
+    { name: "Duplicate Detector", href: "/tools/duplicate-detector" },
   ],
   legal: [
     { name: "Privacy Policy", href: "/privacy" },
@@ -24,78 +33,56 @@ const footerLinks = {
 export function Footer() {
   return (
     <footer className="bg-secondary text-secondary-foreground">
-      {/* Main Footer Content */}
-      <div className="container py-12">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-          {/* Logo & Description */}
-          <div className="col-span-2">
-            <Link to="/" className="flex items-center mb-4">
-              <img 
-                src={logo} 
-                alt="PLR Organizer Pro" 
-                className="h-12 w-auto brightness-0 invert" 
+      {/* Logo Row */}
+      <div className="container py-10">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mb-10 pb-8 border-b border-sidebar-border">
+          <div>
+            <Link to="/" className="flex items-center mb-3">
+              <img
+                src={logo}
+                alt="PLR Organizer Pro"
+                className="h-12 w-auto brightness-0 invert"
               />
             </Link>
-            <p className="text-muted-foreground text-sm mb-6 max-w-xs">
+            <p className="text-muted-foreground text-sm max-w-sm">
               The ultimate desktop application for organizing, managing, and maximizing your PLR content library.
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors" rel="noopener noreferrer">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors" rel="noopener noreferrer">
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors" rel="noopener noreferrer">
-                <Youtube className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors" rel="noopener noreferrer">
-                <Mail className="h-5 w-5" />
-              </a>
+            <p className="text-muted-foreground text-xs mt-2 flex items-center gap-1">
+              <Monitor className="h-3 w-3" /> Windows • Mac • Linux
+            </p>
+          </div>
+          <div className="flex gap-4">
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors" rel="noopener noreferrer">
+              <Twitter className="h-5 w-5" />
+            </a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors" rel="noopener noreferrer">
+              <Facebook className="h-5 w-5" />
+            </a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors" rel="noopener noreferrer">
+              <Youtube className="h-5 w-5" />
+            </a>
+            <a href="#" className="text-muted-foreground hover:text-primary transition-colors" rel="noopener noreferrer">
+              <Mail className="h-5 w-5" />
+            </a>
+          </div>
+        </div>
+
+        {/* 4-Column Links */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {Object.entries(footerLinks).map(([key, links]) => (
+            <div key={key}>
+              <h4 className="font-semibold mb-4 capitalize">{key}</h4>
+              <ul className="space-y-3">
+                {links.map((link) => (
+                  <li key={link.name}>
+                    <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
-
-          {/* Company Links */}
-          <div>
-            <h4 className="font-semibold mb-4">Company</h4>
-            <ul className="space-y-3">
-              {footerLinks.company.map((link) => (
-                <li key={link.name}>
-                  <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Legal Links */}
-          <div>
-            <h4 className="font-semibold mb-4">Legal</h4>
-            <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
-                <li key={link.name}>
-                  <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Resources Links */}
-          <div>
-            <h4 className="font-semibold mb-4">Resources</h4>
-            <ul className="space-y-3">
-              {footerLinks.resources.map((link) => (
-                <li key={link.name}>
-                  <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          ))}
         </div>
       </div>
 
@@ -106,15 +93,9 @@ export function Footer() {
             © {new Date().getFullYear()} PLR Organizer Pro. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Privacy
-            </Link>
-            <Link to="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Terms
-            </Link>
-            <Link to="/cookies" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Cookies
-            </Link>
+            <Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy</Link>
+            <Link to="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms</Link>
+            <Link to="/cookies" className="text-sm text-muted-foreground hover:text-primary transition-colors">Cookies</Link>
           </div>
         </div>
         <div className="container pb-6">
