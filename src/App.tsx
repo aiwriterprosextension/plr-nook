@@ -15,10 +15,10 @@ import NotFound from "@/pages/NotFound";
 import InstallPage from "@/pages/InstallPage";
 
 // Tool Pages
-import PLRScannerPage from "@/pages/tools/PLRScannerPage";
-import ContentTransformerPage from "@/pages/tools/ContentTransformerPage";
 import HTMLEditorPage from "@/pages/tools/HTMLEditorPage";
-import LicenseTrackerPage from "@/pages/tools/LicenseTrackerPage";
+import LicenseDecoderPage from "@/pages/tools/LicenseDecoderPage";
+import DuplicateDetectorPage from "@/pages/tools/DuplicateDetectorPage";
+import ContentSpinnerPage from "@/pages/tools/ContentSpinnerPage";
 import ToolsPage from "@/pages/ToolsPage";
 
 // Legal Pages
@@ -52,14 +52,16 @@ const App = () => (
               <Route path="/tools" element={<ToolsPage />} />
               
               {/* Tool Pages */}
-              <Route path="/tools/plr-scanner" element={<PLRScannerPage />} />
-              <Route path="/tools/content-transformer" element={<ContentTransformerPage />} />
+              <Route path="/tools/license-decoder" element={<LicenseDecoderPage />} />
               <Route path="/tools/html-editor" element={<HTMLEditorPage />} />
-              <Route path="/tools/license-tracker" element={<LicenseTrackerPage />} />
+              <Route path="/tools/duplicate-detector" element={<DuplicateDetectorPage />} />
+              <Route path="/tools/content-spinner" element={<ContentSpinnerPage />} />
               
-              {/* SEO Redirects - Old tool URLs to new Content Transformer */}
-              <Route path="/tools/content-spinner" element={<Navigate to="/tools/content-transformer" replace />} />
-              <Route path="/tools/uniqueness-meter" element={<Navigate to="/tools/content-transformer" replace />} />
+              {/* SEO Redirects - Old tool URLs */}
+              <Route path="/tools/content-transformer" element={<Navigate to="/tools/content-spinner" replace />} />
+              <Route path="/tools/uniqueness-meter" element={<Navigate to="/tools/content-spinner" replace />} />
+              <Route path="/tools/plr-scanner" element={<Navigate to="/tools" replace />} />
+              <Route path="/tools/license-tracker" element={<Navigate to="/tools/license-decoder" replace />} />
 
               {/* Legal Pages */}
               <Route path="/privacy" element={<PrivacyPolicy />} />

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { 
-  Scan, FolderOpen, FileKey, Eye, Wand2, Code,
+  Scan, FolderOpen, FileKey, Eye, Wand2, Code, Copy,
   Clock, DollarSign, AlertTriangle, Archive, Check, ArrowRight,
   Users, ShoppingCart, Megaphone, GraduationCap, Play, Star, Video
 } from "lucide-react";
@@ -36,10 +36,10 @@ const features = [
 ];
 
 const tools = [
-  { icon: Scan, name: "PLR Scanner", desc: "Deep scan technology finds every PLR file on your system." },
-  { icon: Wand2, name: "Content Transformer", desc: "Check uniqueness and transform PLR into original content." },
-  { icon: Code, name: "HTML Editor", desc: "Edit sales pages and squeeze pages directly in the app." },
-  { icon: FileKey, name: "License Tracker", desc: "Database of your rights for each PLR package." },
+  { icon: FileKey, name: "License Rights Decoder", desc: "Auto-parse license files and see your Can / Can't / Maybe rights instantly." },
+  { icon: Code, name: "HTML Sales Page Editor", desc: "Edit and rebrand PLR sales pages visually — no coding required." },
+  { icon: Copy, name: "Duplicate Detector", desc: "Find exact duplicates and content overlap across your entire library." },
+  { icon: Wand2, name: "AI Content Spinner", desc: "Transform generic PLR into unique, SEO-friendly content." },
 ];
 
 const targetAudience = [
@@ -302,8 +302,8 @@ export default function Index() {
             <TabsContent value="tools" className="mt-8">
               <Card>
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold text-secondary mb-6">6 Built-in Power Tools</h3>
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <h3 className="text-2xl font-bold text-secondary mb-6">4 Built-in Power Tools</h3>
+                  <div className="grid sm:grid-cols-2 gap-4">
                     {tools.map((tool, i) => (
                       <div key={i} className="flex items-start gap-3 p-4 bg-muted rounded-lg">
                         <tool.icon className="h-5 w-5 text-primary mt-0.5" />
