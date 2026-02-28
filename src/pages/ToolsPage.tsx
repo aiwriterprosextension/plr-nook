@@ -73,6 +73,7 @@ const ToolsPage = () => {
         description="Discover our suite of 4 specialized PLR tools: License Rights Decoder, Visual HTML Editor, Duplicate Detector, and AI Content Spinner."
         keywords="PLR tools, PLR content management, PLR organizer tools, PLR license decoder, PLR duplicate detector"
         canonicalUrl="https://organizer.aiwriterpros.com/tools"
+        ogImage="https://organizer.aiwriterpros.com/og-tools.png"
         jsonLd={jsonLd}
         robots="index, follow"
         author="PLR Organizer Pro"
