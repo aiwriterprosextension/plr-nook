@@ -9,6 +9,9 @@ interface SEOHeadProps {
   keywords?: string;
   jsonLd?: object;
   children?: ReactNode;
+  robots?: string;
+  author?: string;
+  ogType?: string;
 }
 
 export function SEOHead({
@@ -18,6 +21,9 @@ export function SEOHead({
   ogImage = "/og-image.png",
   keywords,
   jsonLd,
+  robots,
+  author,
+  ogType,
 }: SEOHeadProps) {
   const siteName = "PLR Organizer Pro";
   const fullTitle = `${title} | ${siteName}`;
@@ -29,12 +35,14 @@ export function SEOHead({
       <meta name="title" content={fullTitle} />
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
+      {robots && <meta name="robots" content={robots} />}
+      {author && <meta name="author" content={author} />}
       
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
 
       {/* Open Graph / Facebook */}
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={ogType || "website"} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:site_name" content={siteName} />
