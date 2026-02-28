@@ -38,4 +38,4 @@ export const sitemapRoutes: SitemapRoute[] = [
   { path: "/refund", changefreq: "yearly", priority: 0.3 },
 ];
 
-export const SITE_URL = "https://plr-organizer.lovable.app";
+export const SITE_URL = "https://organizer.aiwriterpros.com";

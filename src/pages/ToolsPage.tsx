@@ -72,7 +72,7 @@ const ToolsPage = () => {
         title="PLR Tools - 4 Powerful Built-In Tools"
         description="Discover our suite of 4 specialized PLR tools: License Rights Decoder, Visual HTML Editor, Duplicate Detector, and AI Content Spinner."
         keywords="PLR tools, PLR content management, PLR organizer tools, PLR license decoder, PLR duplicate detector"
-        canonicalUrl="https://plr-nook.lovable.app/tools"
+        canonicalUrl="https://organizer.aiwriterpros.com/tools"
         jsonLd={jsonLd}
       />
 
