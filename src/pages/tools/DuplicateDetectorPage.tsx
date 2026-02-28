@@ -59,21 +59,32 @@ const faqJsonLd = {
   })),
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://organizer.aiwriterpros.com/" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://organizer.aiwriterpros.com/tools" },
+    { "@type": "ListItem", position: 3, name: "Duplicate Detector", item: "https://organizer.aiwriterpros.com/tools/duplicate-detector" },
+  ],
+};
+
 export default function DuplicateDetectorPage() {
   const [activeTab, setActiveTab] = useState("exact");
 
   return (
     <>
       <SEOHead
-        title="PLR Duplicate & Overlap Detector | Find Every Duplicate PLR Package Instantly"
-        description="Stop wasting disk space and accidentally publishing duplicate PLR content. SHA-256 hashing and content analysis finds exact duplicates, near-duplicates, and overlapping content across your entire library — even when filenames and sellers are completely different."
+        title="PLR Duplicate & Overlap Detector"
+        description="Find exact duplicates, near-duplicates, and content overlap across your entire PLR library. SHA-256 hashing catches matches even with different filenames."
         keywords="PLR duplicate detector, duplicate file finder, content overlap scanner, PLR deduplication, duplicate PLR packages"
-        canonicalUrl="https://plrorganizerpro.com/tools/duplicate-detect"
+        canonicalUrl="https://organizer.aiwriterpros.com/tools/duplicate-detector"
         jsonLd={softwareJsonLd}
         robots="index, follow"
         author="PLR Organizer Pro"
         ogType="product"
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       <main className="flex flex-col scroll-smooth" role="main">
         {/* ── HERO ── */}

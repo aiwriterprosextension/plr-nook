@@ -68,21 +68,32 @@ const faqJsonLd = {
   })),
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://organizer.aiwriterpros.com/" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://organizer.aiwriterpros.com/tools" },
+    { "@type": "ListItem", position: 3, name: "License Rights Decoder", item: "https://organizer.aiwriterpros.com/tools/license-decoder" },
+  ],
+};
+
 export default function LicenseDecoderPage() {
   const [activeTab, setActiveTab] = useState("checklist");
 
   return (
     <>
       <SEOHead
-        title="PLR License Rights Decoder | Instantly Know What You Can Do With Any PLR Content"
-        description="Stop guessing your PLR rights. License Rights Decoder auto-reads license files from any PLR package and gives you a plain-English Can / Can't / Maybe checklist in seconds. No legal degree required."
+        title="PLR License Rights Decoder"
+        description="Auto-read PLR license files and get a plain-English Can / Can't / Maybe checklist in seconds. Know exactly what you're allowed to do with any PLR package."
         keywords="PLR license decoder, license rights checker, PLR rights parser, license tracker, PLR license analyzer"
-        canonicalUrl="https://plrorganizerpro.com/tools/license-decoder"
+        canonicalUrl="https://organizer.aiwriterpros.com/tools/license-decoder"
         jsonLd={softwareJsonLd}
         robots="index, follow"
         author="PLR Organizer Pro"
         ogType="product"
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       <main className="flex flex-col scroll-smooth" role="main">
         {/* ── HERO ── */}

@@ -71,6 +71,16 @@ const faqJsonLd = {
   })),
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://organizer.aiwriterpros.com/" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://organizer.aiwriterpros.com/tools" },
+    { "@type": "ListItem", position: 3, name: "AI Content Spinner", item: "https://organizer.aiwriterpros.com/tools/content-spinner" },
+  ],
+};
+
 const originalText = "In today's fast-paced digital world, making money online has never been easier. With the right tools and strategies, anyone can build a thriving online business from the comfort of their own home. This comprehensive guide will show you everything you need to know to get started on your journey to financial freedom.";
 
 const spunVersions = [
@@ -182,12 +192,15 @@ export default function ContentSpinnerPage() {
   return (
     <>
       <SEOHead
-        title="AI Content Spinner | Transform PLR Into Unique, SEO-Friendly Content"
-        description="Turn generic PLR into 100% unique, rank-ready content in minutes. Uniqueness heatmaps, AI-assisted rewriting, before/after diff view. Works offline. No monthly fees."
+        title="AI Content Spinner for PLR"
+        description="Turn generic PLR into unique, rank-ready content in minutes. Uniqueness heatmaps, AI-assisted rewriting, and before/after diff view. Works offline."
         keywords="AI content spinner, PLR content rewriter, PLR uniqueness checker, content transformer, PLR article spinner"
-        canonicalUrl="https://plrorganizerpro.com/tools/content-spinner"
+        canonicalUrl="https://organizer.aiwriterpros.com/tools/content-spinner"
         jsonLd={softwareJsonLd}
+        robots="index, follow"
+        author="PLR Organizer Pro"
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       <main className="flex flex-col scroll-smooth" role="main">
         {/* ── HERO ── */}
