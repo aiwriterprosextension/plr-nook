@@ -22,7 +22,7 @@ const tools = [
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "PLR Organizer", href: "/plr-organizer" },
-  { name: "Download", href: "#" },
+  { name: "Download", href: "/download" },
   { name: "Resources", href: "#" },
   { name: "About", href: "/about" },
 ];
@@ -63,7 +63,7 @@ export function Header() {
 
             {/* Download */}
             <NavigationMenuItem>
-              <Link to="#" className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
+              <Link to="/download" className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
                 Download
               </Link>
             </NavigationMenuItem>
@@ -152,7 +152,7 @@ export function Header() {
             <Link to="/plr-organizer" className="block py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>
               PLR Organizer
             </Link>
-            <Link to="#" className="block py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>
+            <Link to="/download" className="block py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>
               Download
             </Link>
             <div className="space-y-2">
