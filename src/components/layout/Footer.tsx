@@ -32,7 +32,7 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="bg-[hsl(220,15%,18%)] text-secondary-foreground">
+    <footer className="bg-footer text-footer-foreground">
       {/* Logo Row */}
       <div className="container py-10">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mb-10 pb-8 border-b border-sidebar-border">

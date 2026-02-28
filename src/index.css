@@ -67,6 +67,8 @@
     --sidebar-accent-foreground: 210 17% 95%;
     --sidebar-border: 233 22% 22%;
     --sidebar-ring: 354 96% 44%;
+    --footer: 220 15% 18%;
+    --footer-foreground: 210 17% 95%;
   }
 
   .dark {
