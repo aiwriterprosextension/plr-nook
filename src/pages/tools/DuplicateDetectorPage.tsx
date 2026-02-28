@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SEOHead } from "@/components/SEOHead";
+import { RelatedTools } from "@/components/RelatedTools";
 
 const features = [
   { title: "Exact Duplicate Detection", description: "SHA-256 file hashing finds byte-for-byte identical packages even when filenames are completely different. Zero extra scan time required." },
@@ -336,11 +337,18 @@ export default function DuplicateDetectorPage() {
           </div>
         </section>
 
+        {/* ── RELATED TOOLS ── */}
+        <RelatedTools currentTool="Duplicate & Overlap Detector" />
+
         {/* ── CTA BANNER ── */}
         <section className="py-16 bg-primary" aria-label="Call to Action">
           <div className="container text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground mb-4">Ready to Use Duplicate & Overlap Detector?</h2>
-            <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto">Get instant access to Duplicate & Overlap Detector and all 3 other powerful tools included with PLR Organizer Pro.</p>
+            <p className="text-primary-foreground/80 mb-8 max-w-xl mx-auto">
+              Get instant access to Duplicate & Overlap Detector and all 3 other powerful tools included with{" "}
+              <Link to="/plr-organizer" className="underline font-semibold">PLR Organizer Pro</Link>.{" "}
+              <Link to="/download" className="underline font-semibold">Download now</Link>.
+            </p>
             <Link to="/funnel/offer">
               <Button variant="warning" size="xl" className="border-2 border-warning-foreground/20">
                 Get All 4 Tools for Just $27

@@ -36,10 +36,10 @@ const features = [
 ];
 
 const tools = [
-  { icon: FileKey, name: "License Rights Decoder", desc: "Auto-parse license files and see your Can / Can't / Maybe rights instantly." },
-  { icon: Code, name: "HTML Sales Page Editor", desc: "Edit and rebrand PLR sales pages visually — no coding required." },
-  { icon: Copy, name: "Duplicate Detector", desc: "Find exact duplicates and content overlap across your entire library." },
-  { icon: Wand2, name: "AI Content Spinner", desc: "Transform generic PLR into unique, SEO-friendly content." },
+  { icon: FileKey, name: "License Rights Decoder", desc: "Auto-parse license files and see your Can / Can't / Maybe rights instantly.", href: "/tools/license-decoder" },
+  { icon: Code, name: "HTML Sales Page Editor", desc: "Edit and rebrand PLR sales pages visually — no coding required.", href: "/tools/html-editor" },
+  { icon: Copy, name: "Duplicate Detector", desc: "Find exact duplicates and content overlap across your entire library.", href: "/tools/duplicate-detector" },
+  { icon: Wand2, name: "AI Content Spinner", desc: "Transform generic PLR into unique, SEO-friendly content.", href: "/tools/content-spinner" },
 ];
 
 const targetAudience = [
@@ -59,13 +59,13 @@ const testimonials = [
 ];
 
 const faqs = [
-  { q: "What operating systems does PLR Organizer Pro support?", a: "PLR Organizer Pro runs natively on Windows 10 and later (x64 and x86), macOS 11 Big Sur and later (Intel and Apple Silicon M1/M2/M3), and Ubuntu 20.04 and later Linux distributions. One purchase covers all your machines." },
+  { q: "What operating systems does PLR Organizer Pro support?", a: "PLR Organizer Pro runs natively on Windows 10 and later (x64 and x86), macOS 11 Big Sur and later (Intel and Apple Silicon M1/M2/M3), and Ubuntu 20.04 and later Linux distributions. One purchase covers all your machines. Visit the download page for installers." },
   { q: "Is my data secure?", a: "Completely. PLR Organizer Pro stores all data in a local SQLite database on your own machine. No data ever leaves your computer. No internet connection is required at any time. There are no accounts, no login, no analytics, and no telemetry of any kind. Your PLR library stays entirely private." },
   { q: "How does the PLR detection work?", a: "Detection uses four layers simultaneously: filename pattern analysis (detecting PLR, MRR, Bundle, Pack keywords), archive inspection (reading the internal structure of ZIP/RAR/7Z files without extracting them), license file parsing (streaming and reading license.txt and rights.txt files), and niche classification (combining all signals into a confidence score from 0–100%). You can override any assignment in the results grid before organising." },
   { q: "Can I organise PLR on external drives?", a: "Yes. You can add any folder or drive — internal, external, USB, or network-attached — to a scan. The Base Output Folder where your organised library is built can also be on an external drive. The app handles cross-drive file operations correctly." },
   { q: "Is there a money-back guarantee?", a: "Yes. Every purchase includes a 7-day money-back guarantee. If PLR Organizer Pro doesn't work as described for any reason, contact support within 7 days of purchase for a full refund — no questions asked." },
   { q: "How is this different from just using folders?", a: "Creating folders manually takes days for a large library and requires you to know every package you own. PLR Organizer does it in minutes automatically — and then gives you ten virtual views to browse your content in ways that physical folders can never provide (by license type, quality score, content type, duplicates, Smart Collections, and more). It also reads inside archives without extracting them, which folders cannot do." },
-  { q: "What if I'm not tech-savvy?", a: "PLR Organizer is designed for non-technical users. The interface guides you through scanning, reviewing, and organising with clear labels and step-by-step confirmation before anything happens. The Token Replacement Wizard in the HTML Editor and the auto-detection in the License Decoder both work without any technical knowledge. If you get stuck, priority email support is included." },
+  { q: "What if I'm not tech-savvy?", a: "PLR Organizer is designed for non-technical users. The interface guides you through scanning, reviewing, and organising with clear labels and step-by-step confirmation before anything happens. The Token Replacement Wizard in the Visual HTML Sales Page Editor and the auto-detection in the License Rights Decoder both work without any technical knowledge. If you get stuck, priority email support is included." },
   { q: "Can I try it before buying?", a: "The demo video on this page shows every feature in detail. The product page has comprehensive descriptions of every feature with real-world examples. Every purchase includes a 7-day money-back guarantee so there is no risk in trying it with your actual library." },
   { q: "Will this slow down my computer?", a: "No. PLR Organizer runs scanning in background worker threads and is designed not to impact your other applications. The scan cache means repeat scans only process new or changed files — typically completing in seconds for libraries you've scanned before. The app's minimum window size is 900×600 and it runs comfortably on any machine that can run Windows 10, macOS 11, or Ubuntu 20.04." },
   { q: "What happens to my data if I uninstall?", a: "Your organised files remain in their folder structure exactly as PLR Organizer left them — uninstalling the app does not touch your files. The SQLite database (which stores your metadata, tags, notes, and organisation history) is deleted with the app unless you export a database backup first from Settings." },
@@ -86,7 +86,7 @@ const comparisonData = [
 ];
 
 const howItWorks = [
-  { step: 1, title: "Download & Install", desc: "Get the app for Windows, Mac, or Linux. Installation takes under a minute.", time: "60 seconds", expand: "Available as a native installer for all platforms. No admin rights required on most systems. No internet needed after installation.", mockup: "Download Screen" },
+  { step: 1, title: "Download & Install", desc: "Get the app for Windows, Mac, or Linux. Installation takes under a minute.", time: "60 seconds", expand: "Available as a native installer for all platforms. No admin rights required on most systems. No internet needed after installation.", mockup: "Download Screen", href: "/download" },
   { step: 2, title: "Scan Your Computer", desc: "Click Scan and let our AI find every PLR package on your drives.", time: "5-10 minutes", expand: "Add as many folders and drives as you like. The smart scan cache means repeat scans are much faster — only new or changed files are re-analysed.", mockup: "Scan Progress" },
   { step: 3, title: "Auto-Organise", desc: "Watch as your entire PLR library gets organised automatically by niche and type.", time: "Automatic", expand: "Review the AI's niche assignments, override any you disagree with, check the full organisation preview, then confirm. Your library is sorted.", mockup: "Organised Library" },
 ];
@@ -292,6 +292,11 @@ export default function Index() {
                 </Card>
               ))}
             </div>
+            <p className="text-center mt-8 text-muted-foreground">
+              <Link to="/plr-organizer" className="text-primary hover:underline font-medium inline-flex items-center gap-1">
+                Learn more about PLR Organizer Pro <ArrowRight className="h-3 w-3" />
+              </Link>
+            </p>
           </div>
         </section>
 
@@ -354,10 +359,10 @@ export default function Index() {
                   <h3 className="text-2xl font-bold text-secondary mb-6">Four Specialist Tools Included at No Extra Cost</h3>
                   <p className="text-muted-foreground mb-6">PLR Organizer Pro includes four additional tools inside the same app — each solving a specific PLR workflow problem that the core organiser doesn't cover.</p>
                   <ul className="space-y-2">
-                    <li className="flex items-center gap-2"><Check className="h-5 w-5 text-primary" /> AI Content Spinner — transform PLR into unique SEO content</li>
-                    <li className="flex items-center gap-2"><Check className="h-5 w-5 text-primary" /> License Rights Decoder — instant Can / Can't / Maybe checklist</li>
-                    <li className="flex items-center gap-2"><Check className="h-5 w-5 text-primary" /> Visual HTML Sales Page Editor — rebrand PLR sales pages without code</li>
-                    <li className="flex items-center gap-2"><Check className="h-5 w-5 text-primary" /> Duplicate &amp; Overlap Detector — SHA-256 detection and safe cleanup</li>
+                    <li className="flex items-center gap-2"><Check className="h-5 w-5 text-primary" /> <Link to="/tools/content-spinner" className="hover:text-primary hover:underline">AI Content Spinner</Link> — transform PLR into unique SEO content</li>
+                    <li className="flex items-center gap-2"><Check className="h-5 w-5 text-primary" /> <Link to="/tools/license-decoder" className="hover:text-primary hover:underline">License Rights Decoder</Link> — instant Can / Can't / Maybe checklist</li>
+                    <li className="flex items-center gap-2"><Check className="h-5 w-5 text-primary" /> <Link to="/tools/html-editor" className="hover:text-primary hover:underline">Visual HTML Sales Page Editor</Link> — rebrand PLR sales pages without code</li>
+                    <li className="flex items-center gap-2"><Check className="h-5 w-5 text-primary" /> <Link to="/tools/duplicate-detector" className="hover:text-primary hover:underline">Duplicate &amp; Overlap Detector</Link> — SHA-256 detection and safe cleanup</li>
                   </ul>
                 </CardContent></Card>
               </TabsContent>
@@ -383,7 +388,9 @@ export default function Index() {
                   <div className="w-16 h-16 rounded-full bg-gradient-primary text-primary-foreground text-2xl font-bold flex items-center justify-center mx-auto mb-4 shadow-red">
                     {item.step}
                   </div>
-                  <h3 className="text-xl font-bold text-secondary mb-2">{item.title}</h3>
+                  <h3 className="text-xl font-bold text-secondary mb-2">
+                    {item.href ? <Link to={item.href} className="hover:text-primary transition-colors">{item.title}</Link> : item.title}
+                  </h3>
                   <p className="text-muted-foreground mb-2">{item.desc}</p>
                   <p className="text-sm text-muted-foreground mb-3">{item.expand}</p>
                   <span className="inline-block px-3 py-1 bg-accent text-primary text-sm font-semibold rounded-full">
