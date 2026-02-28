@@ -96,19 +96,16 @@ const ToolsPage = () => {
               {tools.map((tool) => (
                 <Card
                   key={tool.name}
-                  className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50"
+                  className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50 flex flex-col"
                 >
-                  <CardHeader>
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                      <tool.icon className="w-6 h-6 text-primary" />
-                    </div>
+                  <CardHeader className="text-center">
                     <CardTitle className="text-xl">{tool.name}</CardTitle>
                     <CardDescription className="text-muted-foreground">
                       {tool.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="space-y-4">
-                    <ul className="space-y-2">
+                  <CardContent className="space-y-4 flex-1 flex flex-col">
+                    <ul className="space-y-2 flex-1">
                       {tool.features.map((feature, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
                           <span className="text-primary mt-0.5">•</span>
@@ -116,12 +113,11 @@ const ToolsPage = () => {
                         </li>
                       ))}
                     </ul>
-                    <Button asChild variant="ghost" className="group-hover:text-primary p-0">
-                      <Link to={tool.href} className="flex items-center gap-2">
-                        Learn More
-                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                      </Link>
-                    </Button>
+                    <div className="flex justify-end">
+                      <Button asChild variant="cta" size="sm">
+                        <Link to="/funnel/offer">Use Tool</Link>
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               ))}
