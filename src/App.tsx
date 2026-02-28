@@ -14,6 +14,7 @@ import About from "@/pages/About";
 import NotFound from "@/pages/NotFound";
 import PLROrganizer from "@/pages/PLROrganizer";
 import InstallPage from "@/pages/InstallPage";
+import DownloadPage from "@/pages/DownloadPage";
 
 // Tool Pages
 import HTMLEditorPage from "@/pages/tools/HTMLEditorPage";
@@ -71,6 +72,7 @@ const App = () => (
               <Route path="/cookies" element={<CookiePolicy />} />
               <Route path="/refund" element={<RefundPolicy />} />
               <Route path="/install" element={<InstallPage />} />
+              <Route path="/download" element={<DownloadPage />} />
             </Route>
 
             {/* Funnel Pages (Direct Response - No Header) */}
