@@ -68,21 +68,32 @@ const faqJsonLd = {
   })),
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://organizer.aiwriterpros.com/" },
+    { "@type": "ListItem", position: 2, name: "Tools", item: "https://organizer.aiwriterpros.com/tools" },
+    { "@type": "ListItem", position: 3, name: "HTML Sales Page Editor", item: "https://organizer.aiwriterpros.com/tools/html-editor" },
+  ],
+};
+
 export default function HTMLEditorPage() {
   const [activeTab, setActiveTab] = useState("wysiwyg");
 
   return (
     <>
       <SEOHead
-        title="Visual HTML Sales Page Editor | Edit PLR Sales Pages Without Coding"
-        description="Edit any PLR sales page visually — no HTML skills needed. Dual-pane live preview, token replacement wizard, and one-click rebranding profiles. Go from generic PLR to branded, ready-to-publish funnel in minutes."
+        title="Visual HTML Sales Page Editor"
+        description="Edit PLR sales pages visually — no coding needed. Live preview, token replacement wizard, and one-click rebranding profiles. Generic to branded in minutes."
         keywords="HTML sales page editor, PLR page editor, visual HTML editor, sales page customizer, PLR rebranding tool"
-        canonicalUrl="https://plrorganizerpro.com/tools/html-editor"
+        canonicalUrl="https://organizer.aiwriterpros.com/tools/html-editor"
         jsonLd={softwareJsonLd}
         robots="index, follow"
         author="PLR Organizer Pro"
         ogType="product"
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       <main className="flex flex-col scroll-smooth" role="main">
         {/* ── HERO ── */}
