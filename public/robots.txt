@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://plr-nook.lovable.app/sitemap.xml
+Sitemap: https://plr-organizer.lovable.app/sitemap.xml
