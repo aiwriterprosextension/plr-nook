@@ -18,6 +18,9 @@ export default function InstallPage() {
       <SEOHead
         title="Install PLR Organizer Pro | Get the App"
         description="Install PLR Organizer Pro on your device for instant access, offline support, and a native app experience."
+        canonicalUrl="https://organizer.aiwriterpros.com/install"
+        robots="index, follow"
+        author="PLR Organizer Pro"
       />
       <div className="py-20">
         <div className="container max-w-2xl text-center">

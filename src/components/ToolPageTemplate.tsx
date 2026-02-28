@@ -113,6 +113,8 @@ export function ToolPageTemplate({
         keywords={seoKeywords}
         canonicalUrl={`https://organizer.aiwriterpros.com${canonicalPath}`}
         jsonLd={jsonLd}
+        robots="index, follow"
+        author="PLR Organizer Pro"
       />
       
       <article className="flex flex-col">

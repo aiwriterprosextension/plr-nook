@@ -7,6 +7,9 @@ export default function TermsOfService() {
         title="Terms of Service | PLR Organizer Pro"
         description="Read our terms of service to understand the rules and guidelines for using PLR Organizer Pro software and services."
         keywords="terms of service, terms and conditions, PLR Organizer Pro, software license"
+        canonicalUrl="https://organizer.aiwriterpros.com/terms"
+        robots="index, follow"
+        author="PLR Organizer Pro"
       />
 
       <div className="py-16 bg-background">

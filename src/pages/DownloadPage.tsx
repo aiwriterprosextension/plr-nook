@@ -40,7 +40,7 @@ const softwareAppJsonLd = {
   name: "PLR Organizer Pro",
   operatingSystem: "Windows, macOS, Linux",
   applicationCategory: "UtilitiesApplication",
-  downloadUrl: "https://plrorganizerpro.com/download",
+  downloadUrl: "https://organizer.aiwriterpros.com/download",
   offers: {
     "@type": "Offer",
     price: "27",
@@ -164,7 +164,7 @@ export default function DownloadPage() {
         title="Download PLR Organizer Pro | Windows, Mac & Linux Desktop App"
         description="Download PLR Organizer Pro for Windows, macOS, or Linux. Native desktop app with direct file system access, offline capability, and automatic updates. Free for all PLR Organizer Pro users."
         keywords="download PLR Organizer Pro, PLR software download, PLR organizer Windows, PLR organizer Mac, PLR organizer Linux, desktop PLR tool"
-        canonicalUrl="https://plrorganizerpro.com/download"
+        canonicalUrl="https://organizer.aiwriterpros.com/download"
         robots="index, follow"
         author="PLR Organizer Pro"
         ogType="website"
