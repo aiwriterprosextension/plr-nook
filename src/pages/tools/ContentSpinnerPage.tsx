@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Wand2, Check, ArrowRight, Play, CircleAlert, FileText, Layers } from "lucide-react";
+import { Wand2, Check, ArrowRight, Play, CircleAlert, FileText, Layers, Users, BookOpen, PenTool, Package } from "lucide-react";
 import { Slider } from "@/components/ui/slider";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
@@ -268,6 +268,35 @@ export default function ContentSpinnerPage() {
                       <div>
                         <h3 className="font-semibold text-secondary mb-2">{feature.title}</h3>
                         <p className="text-sm text-muted-foreground">{feature.description}</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* ── USER PERSONAS ── */}
+        <section className="py-16 bg-muted" aria-label="User Personas">
+          <div className="container max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary text-center mb-3">How Different Users Use AI Content Spinner</h2>
+            <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">From affiliate marketers to course creators, see how professionals transform PLR into profit.</p>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                { icon: Users, title: "The Affiliate Marketer", description: "Uses Content Spinner to transform PLR product reviews into unique affiliate content that ranks for buyer-intent keywords. Spins at Medium level to keep product details intact while creating original reviews." },
+                { icon: BookOpen, title: "The Course Creator", description: "Converts PLR ebook chapters into unique course modules, lesson scripts, and student worksheets. Uses Aggressive mode with protected terms to maintain technical accuracy." },
+                { icon: PenTool, title: "The Niche Blogger", description: "Turns a single PLR article into 5 unique blog posts by spinning at different levels and restructuring paragraphs. Builds an entire content calendar from one PLR pack." },
+                { icon: Package, title: "The PLR Reseller", description: "Transforms PLR bundles into \"uniquified\" packages with higher perceived value. Uses bulk processing to spin entire product libraries before relisting on marketplaces." },
+              ].map((persona, i) => (
+                <Card key={i} className="bg-card border-0 shadow-md">
+                  <CardContent className="pt-6">
+                    <div className="flex items-start gap-3">
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <persona.icon className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-semibold text-secondary mb-2">{persona.title}</h3>
+                        <p className="text-sm text-muted-foreground">{persona.description}</p>
                       </div>
                     </div>
                   </CardContent>
