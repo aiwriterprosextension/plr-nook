@@ -19,6 +19,13 @@ const tools = [
   { name: "AI Content Spinner", desc: "Make PLR content unique", icon: Wand2, href: "/tools/content-spinner" },
 ];
 
+const navLinks = [
+  { name: "Home", href: "/" },
+  { name: "Download", href: "#" },
+  { name: "Resources", href: "#" },
+  { name: "About", href: "/about" },
+];
+
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
@@ -39,12 +46,21 @@ export function Header() {
         {/* Desktop Navigation */}
         <NavigationMenu className="hidden lg:flex">
           <NavigationMenuList>
+            {/* Home */}
             <NavigationMenuItem>
               <Link to="/" className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
                 Home
               </Link>
             </NavigationMenuItem>
 
+            {/* Download */}
+            <NavigationMenuItem>
+              <Link to="#" className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
+                Download
+              </Link>
+            </NavigationMenuItem>
+
+            {/* Tools Dropdown */}
             <NavigationMenuItem>
               <NavigationMenuTrigger className="bg-transparent">Tools</NavigationMenuTrigger>
               <NavigationMenuContent>
@@ -79,6 +95,14 @@ export function Header() {
               </NavigationMenuContent>
             </NavigationMenuItem>
 
+            {/* Resources */}
+            <NavigationMenuItem>
+              <Link to="#" className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
+                Resources
+              </Link>
+            </NavigationMenuItem>
+
+            {/* About */}
             <NavigationMenuItem>
               <Link to="/about" className="px-4 py-2 text-sm font-medium text-foreground hover:text-primary transition-colors">
                 About
@@ -117,6 +141,9 @@ export function Header() {
             <Link to="/" className="block py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>
               Home
             </Link>
+            <Link to="#" className="block py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>
+              Download
+            </Link>
             <div className="space-y-2">
               <span className="text-sm font-semibold text-muted-foreground">Tools</span>
               {tools.map((tool) => (
@@ -138,6 +165,9 @@ export function Header() {
                 View All Tools →
               </Link>
             </div>
+            <Link to="#" className="block py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>
+              Resources
+            </Link>
             <Link to="/about" className="block py-2 font-medium" onClick={() => setMobileMenuOpen(false)}>
               About
             </Link>

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Twitter, Facebook, Youtube } from "lucide-react";
+import { Mail, Twitter, Facebook, Youtube, Lock } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const footerLinks = {
@@ -12,6 +12,12 @@ const footerLinks = {
     { name: "Terms of Service", href: "/terms" },
     { name: "Cookie Policy", href: "/cookies" },
     { name: "Refund Policy", href: "/refund" },
+  ],
+  resources: [
+    { name: "PLR Organisation Guide", href: "#" },
+    { name: "Blog", href: "#" },
+    { name: "Help Documentation", href: "#" },
+    { name: "PLR Resource Centre", href: "#" },
   ],
 };
 
@@ -34,16 +40,16 @@ export function Footer() {
               The ultimate desktop application for organizing, managing, and maximizing your PLR content library.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors" rel="noopener noreferrer">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors" rel="noopener noreferrer">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors" rel="noopener noreferrer">
                 <Youtube className="h-5 w-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors" rel="noopener noreferrer">
                 <Mail className="h-5 w-5" />
               </a>
             </div>
@@ -77,6 +83,19 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Resources Links */}
+          <div>
+            <h4 className="font-semibold mb-4">Resources</h4>
+            <ul className="space-y-3">
+              {footerLinks.resources.map((link) => (
+                <li key={link.name}>
+                  <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -96,6 +115,16 @@ export function Footer() {
             <Link to="/cookies" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               Cookies
             </Link>
+          </div>
+        </div>
+        <div className="container pb-6">
+          <div className="flex flex-wrap justify-center gap-4 text-xs text-muted-foreground">
+            <span className="flex items-center gap-1">
+              <Lock className="h-3 w-3" />
+              Secure & Trusted Platform
+            </span>
+            <span>|</span>
+            <span>7-Day Money-Back Guarantee</span>
           </div>
         </div>
       </div>
