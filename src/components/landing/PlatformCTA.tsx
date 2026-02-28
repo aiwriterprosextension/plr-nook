@@ -7,13 +7,10 @@ type Platform = "Windows" | "Mac" | "Linux" | "Unknown";
 
 function detectPlatform(): Platform {
   if (typeof window === "undefined") return "Unknown";
-  
   const userAgent = navigator.userAgent.toLowerCase();
-  
   if (userAgent.includes("win")) return "Windows";
   if (userAgent.includes("mac")) return "Mac";
   if (userAgent.includes("linux")) return "Linux";
-  
   return "Unknown";
 }
 
@@ -41,7 +38,7 @@ export function PlatformCTA({ variant = "cta", size = "xl", className = "" }: Pl
   const Icon = config.icon;
 
   return (
-    <Link to="/funnel/offer">
+    <Link to="/plr-organizer">
       <Button variant={variant} size={size} className={className}>
         <Icon className="h-5 w-5" />
         Get PLR Organizer Pro

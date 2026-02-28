@@ -9,7 +9,7 @@ const stats = [
 
 export function StatsBar() {
   return (
-    <section className="bg-secondary py-6">
+    <section className="bg-secondary py-6" aria-label="Social proof statistics">
       <div className="container">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {stats.map((stat, i) => (
