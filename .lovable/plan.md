@@ -1,44 +1,77 @@
 
 
-## Footer Redesign — 4 Columns + Improved Structure
+## Internal Linking Strategy for SEO
 
 ### Current State
-The footer has a logo/description area (spanning 2 cols) plus 3 link columns (Company, Legal, Resources) in a 5-column grid. The Company column only has 2 links (About Us, Tools), making it feel thin. There are no direct links to individual tool pages.
 
-### Proposed New Structure
+The site has 12+ indexable pages but weak cross-linking between them. Most pages only link to `/funnel/offer` (the sales funnel) and lack contextual links to sibling pages. This limits how search engines discover and rank deeper pages.
 
-**Layout**: Logo area (full width on top or spanning left) + 4 even columns below
+### Strategy Overview
+
+Add contextual internal links across all major pages so every page links to at least 3 other relevant pages using descriptive anchor text. No new pages are created -- this only adds `<Link>` elements to existing content.
 
 ```text
-[Logo + tagline + social icons]
-─────────────────────────────────────────────────────
-Company        Tools               Legal             Resources
-─────────      ──────────────────  ────────────────  ──────────────────
-Home           PLR Organizer       Privacy Policy    PLR Organisation Guide
-About Us       Content Spinner     Terms of Service  Blog
-PLR Organizer  License Decoder     Cookie Policy     Help Documentation
-Download       HTML Editor         Refund Policy     PLR Resource Centre
-               Duplicate Detector
-─────────────────────────────────────────────────────
-(c) 2026 ... | Privacy | Terms | Cookies
-Secure & Trusted Platform | 7-Day Money-Back Guarantee
+                    Homepage (/)
+                   /    |     \
+        PLR Organizer  Tools Hub  Download
+           /    \       /  |  \  \
+     License  HTML   Spinner  Duplicate  About
+      Decoder  Editor         Detector
 ```
 
-### Key Improvements
+### Changes by Page
 
-1. **Logo section moves to full-width top row** -- gives the 4 columns equal space below instead of cramming them into 3 cols beside the logo
-2. **Company column gets more links** -- Home, About Us, PLR Organizer, Download (mirrors the main nav)
-3. **New Tools column** -- Direct links to all 5 tool/product pages: PLR Organizer (flagship), AI Content Spinner, License Rights Decoder, HTML Sales Page Editor, Duplicate Detector. These link to their sales/info pages, not the funnel
-4. **Legal and Resources stay as-is** -- already well-structured
-5. **Newsletter signup row** (optional) -- a simple email input + "Subscribe" button between the logo row and columns, with text like "Get PLR tips and product updates". Can skip if you prefer to keep it clean
-6. **Platform badges** -- Add small "Windows | Mac | Linux" text or icons near the tagline to reinforce cross-platform support
+**1. Homepage (`src/pages/Index.tsx`)**
+- In the "How It Works" Step 1, link "Download & Install" text to `/download`
+- In the tools section, make each tool card link to its dedicated page (some already do -- verify and fill gaps)
+- Add a "Learn more about PLR Organizer Pro" link in the features section pointing to `/plr-organizer`
+- In the FAQ answers, link relevant mentions: "desktop app" to `/download`, "License Decoder" to `/tools/license-decoder`, "HTML Editor" to `/tools/html-editor`, "Content Spinner" to `/tools/content-spinner`
+
+**2. PLR Organizer (`src/pages/PLROrganizer.tsx`)**
+- In the "Included Tools" section, ensure all 4 tool cards link to their individual pages (already partially done)
+- Add a "Download for Windows, Mac & Linux" link in the hero or CTA pointing to `/download`
+- Change the placeholder `#` on "Download PLR Organizer" button (~line 577) to `/download`
+- Add contextual mention linking to `/about` in the trust/credibility section
+
+**3. Tools Hub (`src/pages/ToolsPage.tsx`)**
+- Add a brief intro paragraph linking back to `/plr-organizer` ("All tools are included with PLR Organizer Pro")
+- Add a "Download the desktop app" link to `/download`
+
+**4. Each Tool Page (License Decoder, HTML Editor, Duplicate Detector, Content Spinner)**
+- Add a "Related Tools" section at the bottom of each page listing the other 3 tools with links
+- Add a contextual link back to `/plr-organizer` ("Part of PLR Organizer Pro")
+- Add a link to `/download` in each page's CTA area
+
+**5. Download Page (`src/pages/DownloadPage.tsx`)**
+- Add links to `/plr-organizer` ("Learn what PLR Organizer Pro can do")
+- Add links to `/tools` ("Explore the included tools")
+
+**6. About Page (`src/pages/About.tsx`)**
+- Add links to `/plr-organizer`, `/tools`, and `/download` in the body content or CTA
+
+**7. Footer (`src/components/layout/Footer.tsx`)**
+- Already well-linked with 4 columns -- no changes needed
+
+### Implementation Rules
+
+- Use descriptive anchor text (e.g., "License Rights Decoder" not "click here")
+- Use React Router `<Link>` for all internal links
+- Add `aria-label` where anchor text alone may be ambiguous
+- Keep links contextual -- placed within relevant content, not forced
+- Target 3-5 internal links per page minimum (excluding nav/footer)
 
 ### Technical Details
 
-- Single file edit: `src/components/layout/Footer.tsx`
-- Grid changes from `md:grid-cols-5` to a two-row layout: logo row (full width) + `grid-cols-2 md:grid-cols-4` for the link columns
-- Tool links use existing routes (`/plr-organizer`, `/tools/content-spinner`, `/tools/license-decoder`, `/tools/html-editor`, `/tools/duplicate-detector`)
-- Company links: `/` (Home), `/about` (About Us), `/plr-organizer` (PLR Organizer), `#` (Download placeholder)
-- Bottom bar remains unchanged (copyright, quick legal links, trust badges)
-- All links use `<Link>` from react-router-dom for internal navigation
+Files to edit:
+- `src/pages/Index.tsx` -- add 4-6 contextual links in features, how-it-works, and FAQ sections
+- `src/pages/PLROrganizer.tsx` -- fix placeholder `#` link, add download and about links
+- `src/pages/ToolsPage.tsx` -- add intro links to PLR Organizer and Download
+- `src/pages/tools/ContentSpinnerPage.tsx` -- add "Related Tools" section
+- `src/pages/tools/LicenseDecoderPage.tsx` -- add "Related Tools" section
+- `src/pages/tools/HTMLEditorPage.tsx` -- add "Related Tools" section
+- `src/pages/tools/DuplicateDetectorPage.tsx` -- add "Related Tools" section
+- `src/pages/DownloadPage.tsx` -- add contextual links to PLR Organizer and Tools
+- `src/pages/About.tsx` -- add links to product and download pages
+
+Each tool page gets a shared "Related Tools" component pattern: a simple 3-card row at the bottom (above the final CTA) showing the other 3 tools with icon, name, one-line description, and a link. This can be extracted into a reusable `RelatedTools` component that accepts the current tool's name to exclude it.
 
