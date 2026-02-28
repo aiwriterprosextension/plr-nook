@@ -99,7 +99,10 @@ const ToolsPage = () => {
                   className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50 flex flex-col"
                 >
                   <CardHeader className="text-center">
-                    <CardTitle className="text-xl">{tool.name}</CardTitle>
+                    <CardTitle className="text-xl flex items-center justify-center gap-2">
+                      <tool.icon className="w-5 h-5 text-primary" />
+                      {tool.name}
+                    </CardTitle>
                     <CardDescription className="text-muted-foreground">
                       {tool.description}
                     </CardDescription>
@@ -113,7 +116,11 @@ const ToolsPage = () => {
                         </li>
                       ))}
                     </ul>
-                    <div className="flex justify-end">
+                    <div className="flex items-center justify-between">
+                      <Link to={tool.href} className="text-primary hover:underline text-sm font-medium flex items-center gap-1">
+                        Learn More
+                        <ArrowRight className="w-3 h-3" />
+                      </Link>
                       <Button asChild variant="cta" size="sm">
                         <Link to="/funnel/offer">Use Tool</Link>
                       </Button>
