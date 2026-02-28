@@ -55,6 +55,7 @@ const testimonials = [
   { name: "Jennifer K.", role: "Digital Product Seller", text: "The license tracking feature alone is worth the price. No more accidental violations.", rating: 5 },
   { name: "David R.", role: "Content Creator", text: "Finally, I can actually USE the PLR I've been hoarding. Game changer.", rating: 5 },
   { name: "Tom B.", role: "PLR Reseller", text: "The duplicate detector alone found 43 packages I'd bought twice. That's over $200 in wasted purchases I'll never make again.", rating: 5 },
+  { name: "Lisa W.", role: "Virtual Assistant", text: "I manage PLR libraries for 6 clients. This app turned a full day of sorting into a 20-minute task. My clients think I'm magic.", rating: 5 },
 ];
 
 const faqs = [
@@ -501,7 +502,7 @@ export default function Index() {
               <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">What Our Users Say</h2>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {testimonials.map((t, i) => (
                 <Card key={i} className="bg-card" itemScope itemType="https://schema.org/Review">
                   <CardContent className="pt-6">
