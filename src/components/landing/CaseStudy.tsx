@@ -10,7 +10,7 @@ const stats = [
 
 export function CaseStudy() {
   return (
-    <section className="py-20 bg-muted">
+    <section className="py-20 bg-muted" aria-label="Success story">
       <div className="container">
         <div className="text-center mb-8">
           <span className="inline-block px-4 py-1.5 bg-primary/10 text-primary font-semibold rounded-full text-sm mb-4">
@@ -27,7 +27,7 @@ export function CaseStudy() {
             <CardContent className="p-0">
               <div className="grid lg:grid-cols-3">
                 {/* Story section */}
-                <div className="lg:col-span-2 p-8">
+                <article className="lg:col-span-2 p-8">
                   <div className="flex items-start gap-4 mb-6">
                     <div className="w-16 h-16 rounded-full bg-gradient-primary flex items-center justify-center flex-shrink-0 shadow-red">
                       <span className="text-2xl font-bold text-primary-foreground">M</span>
@@ -56,34 +56,34 @@ export function CaseStudy() {
                     </p>
                   </div>
 
-                  <div className="mt-6 p-4 bg-accent rounded-lg border-l-4 border-primary">
+                  <blockquote className="mt-6 p-4 bg-accent rounded-lg border-l-4 border-primary">
                     <Quote className="h-6 w-6 text-primary mb-2" />
                     <p className="text-secondary font-medium italic">
                       "I found 127 PLR packages I completely forgot I owned. That's over $4,200 worth of content 
                       that was just sitting there collecting digital dust. PLR Organizer Pro paid for itself 
                       150 times over in the first weekend."
                     </p>
-                    <p className="text-sm text-muted-foreground mt-2">— Maria S., Dallas, TX</p>
-                  </div>
-                </div>
+                    <footer className="text-sm text-muted-foreground mt-2">— Maria S., Dallas, TX</footer>
+                  </blockquote>
+                </article>
 
                 {/* Stats sidebar */}
-                <div className="bg-secondary p-8">
+                <aside className="bg-secondary p-8" aria-label="Maria's results">
                   <h4 className="text-lg font-bold text-secondary-foreground mb-6 text-center">
                     Maria's Results
                   </h4>
-                  <div className="space-y-6">
+                  <dl className="space-y-6">
                     {stats.map((stat, i) => (
                       <div key={i} className="text-center">
                         <stat.icon className="h-8 w-8 text-primary mx-auto mb-2" />
-                        <p className="text-2xl font-extrabold text-secondary-foreground">
+                        <dd className="text-2xl font-extrabold text-secondary-foreground">
                           {stat.value}
-                        </p>
-                        <p className="text-sm text-secondary-foreground/70">{stat.label}</p>
+                        </dd>
+                        <dt className="text-sm text-secondary-foreground/70">{stat.label}</dt>
                       </div>
                     ))}
-                  </div>
-                </div>
+                  </dl>
+                </aside>
               </div>
             </CardContent>
           </Card>

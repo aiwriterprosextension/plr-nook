@@ -4,29 +4,29 @@ import { Card, CardContent } from "@/components/ui/card";
 const mistakes = [
   {
     mistake: "Storing PLR with generic names like \"PLR_Package_1\"",
-    solution: "Our auto-organizer uses smart naming conventions based on niche and content type",
+    solution: "Our auto-organiser uses smart naming conventions and niche-based folder structure so every package lands in exactly the right place automatically.",
   },
   {
     mistake: "Not tracking license rights for each package",
-    solution: "Built-in license tracker prevents violations and keeps you legal",
+    solution: "Built-in license tracker reads every license file and gives you a plain-English Can / Can't / Maybe checklist — so you're always compliant.",
   },
   {
     mistake: "Forgetting what you already own and buying duplicates",
-    solution: "Duplicate detection alerts you before you waste money",
+    solution: "Duplicate detection using SHA-256 hashing alerts you to packages you already own before you waste money buying them again.",
   },
   {
     mistake: "Never using purchased content because you can't find it",
-    solution: "Visual preview system lets you see and use everything instantly",
+    solution: "Visual preview system lets you see every package's contents, niche, license, and quality score instantly — without opening a single file.",
   },
   {
     mistake: "Scattered files across multiple devices and folders",
-    solution: "Centralized organization brings everything into one searchable library",
+    solution: "Centralised organisation with a single Base Output Folder brings everything from every drive into one searchable, browsable library.",
   },
 ];
 
 export function CommonMistakes() {
   return (
-    <section className="py-20 bg-muted">
+    <section className="py-20 bg-muted" aria-label="Common mistakes PLR buyers make">
       <div className="container">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">
