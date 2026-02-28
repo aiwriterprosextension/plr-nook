@@ -7,7 +7,7 @@ const footerLinks = {
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "PLR Organizer", href: "/plr-organizer" },
-    { name: "Download", href: "#" },
+    { name: "Download", href: "/download" },
   ],
   tools: [
     { name: "PLR Organizer", href: "/plr-organizer" },
@@ -71,7 +71,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {Object.entries(footerLinks).map(([key, links]) => (
             <div key={key}>
-              <h4 className="font-semibold mb-4 capitalize">{key}</h4>
+              <h4 className="font-semibold mb-4 capitalize text-white">{key}</h4>
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.name}>
@@ -88,15 +88,10 @@ export function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-sidebar-border">
-        <div className="container py-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="container py-6 flex justify-center items-center">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} PLR Organizer Pro. All rights reserved.
           </p>
-          <div className="flex gap-6">
-            <Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy</Link>
-            <Link to="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms</Link>
-            <Link to="/cookies" className="text-sm text-muted-foreground hover:text-primary transition-colors">Cookies</Link>
-          </div>
         </div>
         <div className="container pb-6">
           <div className="flex flex-wrap justify-center gap-4 text-xs text-muted-foreground">
